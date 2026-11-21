@@ -1,0 +1,70 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function mine(uid) { return signedIn() && request.auth.uid == uid; }
+    function trusted(sender, receiver) {
+      return exists(/databases/$(database)/documents/users/$(sender)/trustedContacts/$(receiver))
+        && exists(/databases/$(database)/documents/users/$(receiver)/trustedContacts/$(sender))
+        && get(/databases/$(database)/documents/users/$(sender)/trustedContacts/$(receiver)).data.blocked == false
+        && get(/databases/$(database)/documents/users/$(receiver)/trustedContacts/$(sender)).data.blocked == false;
+    }
+
+    match /users/{uid} {
+      // Phone lookup and profile changes go through authenticated server endpoints.
+      allow get: if mine(uid);
+      allow update: if mine(uid)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['fcmToken', 'fcmTokenUpdatedAt'])
+        && request.resource.data.fcmToken is string
+        && request.resource.data.fcmToken.size() <= 4096
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['fcmTokenUpdatedAt'])
+          || request.resource.data.fcmTokenUpdatedAt == request.time);
+
+      match /trustedContacts/{contactUid} {
+        allow read: if mine(uid) || mine(contactUid);
+        // Only the backend can establish mutual trust after an invited user accepts.
+        allow update: if mine(uid)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['blocked'])
+          && request.resource.data.blocked is bool;
+        allow delete: if mine(uid) || mine(contactUid);
+      }
+    }
+
+    match /requests/{id} {
+      allow get: if signedIn() && (!exists(/databases/$(database)/documents/requests/$(id))
+        || resource.data.fromUid == request.auth.uid || resource.data.toUid == request.auth.uid);
+      allow list: if signedIn() && (resource.data.fromUid == request.auth.uid || resource.data.toUid == request.auth.uid);
+      // Request creation and acceptance are server-authorized operations.
+      allow update: if signedIn() && resource.data.toUid == request.auth.uid
+        && resource.data.status == 'pending' && request.resource.data.status == 'rejected'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status']);
+    }
+
+    match /reports/{id} {
+      // Reports and email outbox are authenticated, recipient-validated backend writes.
+      allow read: if signedIn() && resource.data.reportedBy == request.auth.uid;
+    }
+
+    match /alerts/{id} {
+      allow read: if signedIn() && resource.data.toUid == request.auth.uid;
+      allow create: if signedIn() && request.resource.data.fromUid == request.auth.uid
+        && request.resource.data.toUid is string && request.resource.data.toUid != request.auth.uid
+        && request.resource.data.keys().hasOnly(['fromUid','toUid','fromName','fromPhone','senderName','senderPhone','latitude','longitude','hasLocation','voiceUrl','createdAt','timestamp','type'])
+        && trusted(request.auth.uid, request.resource.data.toUid);
+      allow update: if signedIn() && resource.data.toUid == request.auth.uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['handled'])
+        && request.resource.data.handled == true;
+    }
+
+    match /history/{id} {
+      allow read: if signedIn() && resource.data.ownerUid == request.auth.uid;
+      allow update: if signedIn() && resource.data.ownerUid == request.auth.uid && resource.data.direction == 'received'
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['sirenStatus', 'receivedAt', 'sirenStoppedAt'])
+        && request.resource.data.sirenStatus in ['received', 'ringing', 'stopped', 'timed_out', 'interrupted']
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['receivedAt']) || request.resource.data.receivedAt == request.time)
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['sirenStoppedAt']) || request.resource.data.sirenStoppedAt == request.time);
+    }
+    // Admin SDK endpoints manage history, phone reservations, delivery receipts,
+    // rate limits and voice cleanup. All other client access is denied.
+  }
+}

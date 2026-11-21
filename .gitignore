@@ -1,0 +1,45 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+google-services.json
+# Keystores and private keys
+*.jks
+*.keystore
+dontmissmom_key
+keystore.properties
+
+# Release artifacts
+app/release/
+.work/
+.kotlin/sessions/
+**/node_modules/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Local builds, credentials and developer-only state
+**/build/
+.idea/
+.kotlin/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+*serviceAccount*.json
+*.hprof
+*.log
+.DS_Store

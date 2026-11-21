@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/requestsRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingHorizontal="24dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.IconButton" android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="@string/back" app:icon="@drawable/ic_back" app:iconTint="@color/info"/>
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/requests" android:textAppearance="@style/Text.DMM.Title"/>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/requests_body" android:textAppearance="@style/Text.DMM.Body"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/requestsProgress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/requestsState" android:paddingVertical="36dp" android:visibility="gone">
+        <TextView android:id="@+id/tvRequestsStateTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/empty_requests_title" android:textAppearance="@style/Text.DMM.Section"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView android:id="@+id/tvRequestsStateBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/empty_requests_body" android:textAppearance="@style/Text.DMM.Body"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRetryRequests" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/retry" style="@style/Widget.Material3.Button.TextButton" android:visibility="gone"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerRequests" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingBottom="16dp"/>
+</LinearLayout>

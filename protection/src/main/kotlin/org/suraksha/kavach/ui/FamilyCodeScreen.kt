@@ -1,0 +1,97 @@
+package org.suraksha.kavach.ui
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.launch
+import org.suraksha.kavach.KavachApplication
+import org.suraksha.kavach.R
+
+@Composable
+fun FamilyCodeScreen(graph: KavachApplication) {
+    var word by remember { mutableStateOf("") }
+    var confirmation by remember { mutableStateOf("") }
+    var busy by remember { mutableStateOf(false) }
+    var status by remember { mutableIntStateOf(0) }
+    val scope = rememberCoroutineScope()
+    val keyboard = LocalSoftwareKeyboardController.current
+    Text(stringResource(R.string.sk_family_code_title), style = MaterialTheme.typography.headlineLarge)
+    Text(stringResource(R.string.sk_code_detail))
+    OutlinedTextField(word, { word = it.take(256); status = 0 }, enabled = !busy, singleLine = true,
+        label = { Text(stringResource(R.string.sk_code_input)) }, visualTransformation = PasswordVisualTransformation(),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
+        modifier = Modifier.fillMaxWidth().testTag("familyCode"))
+    OutlinedTextField(confirmation, { confirmation = it.take(256); status = 0 }, enabled = !busy, singleLine = true,
+        label = { Text(stringResource(R.string.sk_code_confirm)) }, visualTransformation = PasswordVisualTransformation(),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
+        modifier = Modifier.fillMaxWidth().testTag("familyCodeConfirm"))
+    Button(onClick = {
+        keyboard?.hide()
+        if (word != confirmation) status = R.string.sk_code_mismatch
+        else {
+            val input = word
+            word = ""; confirmation = ""; busy = true
+            scope.launch {
+                try { status = if (graph.familyCode.save(input)) R.string.sk_code_saved else R.string.sk_code_invalid }
+                catch (e: CancellationException) { throw e }
+                catch (_: Exception) { status = R.string.sk_code_save_failed }
+                finally { busy = false }
+            }
+        }
+    }, enabled = !busy && word.isNotBlank(), modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+        Text(stringResource(R.string.sk_code_save))
+    }
+    if (status != 0) Text(stringResource(status), color = if (status == R.string.sk_code_saved) Forest else Danger)
+}
+
+@Composable
+fun SuspiciousCallScreen(graph: KavachApplication, setCode: () -> Unit) {
+    var configured by remember { mutableStateOf(false) }
+    var answer by remember { mutableStateOf("") }
+    var checking by remember { mutableStateOf(false) }
+    var result by remember { mutableStateOf<Boolean?>(null) }
+    val scope = rememberCoroutineScope()
+    val keyboard = LocalSoftwareKeyboardController.current
+    LaunchedEffect(Unit) { configured = runCatching { graph.familyCode.configured() }.getOrDefault(false) }
+    Text(stringResource(R.string.sk_suspicious_call_title), style = MaterialTheme.typography.headlineLarge)
+    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)) {
+        Column(Modifier.padding(24.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
+            Text(stringResource(R.string.sk_ask_code), style = MaterialTheme.typography.headlineMedium)
+            Text(stringResource(R.string.sk_callback_instruction), style = MaterialTheme.typography.titleLarge)
+        }
+    }
+    Button(onClick = { graph.callGuardian(graph) }, modifier = Modifier.fillMaxWidth().heightIn(min = 68.dp)) {
+        Text(stringResource(R.string.sk_call_guardian))
+    }
+    if (configured) {
+        OutlinedTextField(answer, { answer = it.take(256); result = null }, singleLine = true, enabled = !checking,
+            label = { Text(stringResource(R.string.sk_code_answer)) }, visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, autoCorrectEnabled = false),
+            modifier = Modifier.fillMaxWidth().testTag("codeAnswer"))
+        OutlinedButton(onClick = {
+            keyboard?.hide()
+            val input = answer; answer = ""; checking = true
+            scope.launch {
+                try { result = graph.familyCode.matches(input) }
+                catch (e: CancellationException) { throw e }
+                catch (_: Exception) { result = false }
+                finally { checking = false }
+            }
+        }, enabled = !checking && answer.isNotBlank(), modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp)) {
+            Text(stringResource(R.string.sk_check_code))
+        }
+        result?.let { Text(stringResource(if (it) R.string.sk_code_match else R.string.sk_code_no_match), color = if (it) Forest else Danger) }
+    } else {
+        Text(stringResource(R.string.sk_code_not_set))
+        OutlinedButton(onClick = setCode, modifier = Modifier.fillMaxWidth().heightIn(min = 60.dp)) { Text(stringResource(R.string.sk_family_code_title)) }
+    }
+}

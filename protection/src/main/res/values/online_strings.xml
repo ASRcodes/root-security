@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_online_title">Online link protection</string>
+    <string name="sk_online_description">Check links against Google Safe Browsing threat information. Local message checks still run on this phone.</string>
+    <string name="sk_online_disclosure">When enabled, this phone sends short URL hash prefixes to Google. Message text and complete URLs are not sent. Google can see your IP address and request metadata. Your key is encrypted on this phone.</string>
+    <string name="sk_online_limitations">Advisory provided by Google for Google-listed threats. Detection is not guaranteed. No match means no known threat was found, not that a link is safe.</string>
+    <string name="sk_online_noncommercial">This prototype uses the noncommercial Safe Browsing API. A commercial release needs an appropriately licensed service.</string>
+    <string name="sk_online_needs_key">Online checks need a Safe Browsing API key. Add one in Protection settings.</string>
+    <string name="sk_online_disabled">Online checks are off. Only local checks are available.</string>
+    <string name="sk_online_enabled">Online checks are enabled. Each result shows whether its lookup completed.</string>
+    <string name="sk_online_key_label">Safe Browsing API key</string>
+    <string name="sk_online_key_hint">Enable the Safe Browsing API in your Google Cloud project and restrict this key to that API. Never share the key in screenshots or messages.</string>
+    <string name="sk_online_save_enable">Save key and enable online checks</string>
+    <string name="sk_online_disable">Turn online checks off</string>
+    <string name="sk_online_enable_saved">Enable using the saved key</string>
+    <string name="sk_online_remove_key">Remove the saved key</string>
+    <string name="sk_online_setting_saved">Choice saved on this phone. Scan a link to check service access.</string>
+    <string name="sk_online_configuration_failed">Could not save this choice. Check the key or try again.</string>
+    <string name="sk_online_setup_help">Google API setup instructions</string>
+    <string name="sk_online_manual_detail">Paste a message or link. Local checks run first. Online reputation checks run only when enabled and configured. Links stay closed.</string>
+    <string name="sk_online_scan_failed">The check could not finish. No safety verdict is available. Try again.</string>
+    <string name="sk_online_possible_threat">Possible harmful link</string>
+    <string name="sk_online_unconfirmed_pattern">Suspicious pattern, not confirmed</string>
+    <string name="sk_online_not_checked">Online check not completed</string>
+    <string name="sk_online_no_known_threat">No known threat found</string>
+    <string name="sk_online_some_unchecked">At least one other link could not be checked online.</string>
+    <string name="sk_online_redirect_scope">Only the supplied link is checked. Short-link redirects and the final website are not opened or inspected.</string>
+    <string name="sk_online_local_history">Message text stays in memory and is never saved. Encrypted history on this phone keeps only risk results, domain names, times and reasons. Online checks send URL hash prefixes, not message bodies or full URLs.</string>
+    <string name="sk_demo_lab">Demo lab</string>
+    <string name="sk_demo_lab_detail">Sample inputs use the real detector and the configured online service. Loading an example does not scan it. Alert preview is a separate simulation.</string>
+    <string name="sk_demo_inputs">Load an example</string>
+    <string name="sk_demo_inputs_detail">Choose an input, then tap Check this message. These links stay closed. The Google test page is harmless and exists to test warnings. No result is hardcoded.</string>
+    <string name="sk_demo_airtel">Load Airtel example</string>
+    <string name="sk_demo_goodmonk">Load Good Monk short-link example</string>
+    <string name="sk_demo_google_test">Load Google-provided phishing TEST URL</string>
+    <string name="sk_demo_ordinary_message">Load an ordinary message</string>
+    <string name="sk_demo_kyc_scam">Load bank KYC scam (fake SBI link)</string>
+    <string name="sk_demo_apk_scam">Load fake app download (APK)</string>
+    <string name="sk_demo_lookalike">Load lookalike website (paypa1)</string>
+    <string name="sk_demo_preview_title">Alert appearance test</string>
+    <string name="sk_demo_preview_detail">Simulation only. This tests the warning screen, not link detection. It does not assess a link or send guardian SMS.</string>
+    <string name="sk_demo_preview_button">Preview test alert</string>
+</resources>

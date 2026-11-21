@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/homePage" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/brand_name" android:textAppearance="@style/Text.DMM.Label"/>
+                <Space android:layout_width="1dp" android:layout_height="6dp"/>
+                <TextView android:id="@+id/tvWelcome" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home" android:textAppearance="@style/Text.DMM.Title"/>
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnNotifications" style="@style/Widget.Material3.Button.IconButton" android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="@string/requests" app:icon="@drawable/ic_bell" app:iconTint="@color/info"/>
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="6dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home_subtitle" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/hero" app:strokeColor="@color/outline" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:background="@drawable/bg_hero">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:drawableStart="@drawable/ic_alert_signal" android:drawableTint="@color/emergency_on_hero" android:drawablePadding="10dp" android:gravity="center_vertical" android:text="@string/sos_eyebrow" android:textAppearance="@style/Text.DMM.Label" android:textColor="@color/emergency_on_hero"/>
+                <Space android:layout_width="1dp" android:layout_height="8dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home_action_title" android:textAppearance="@style/Text.DMM.Title" android:textColor="@color/white" android:textSize="24sp"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/home_action_body" android:textAppearance="@style/Text.DMM.Body" android:textColor="@color/hero_secondary"/>
+                <Space android:layout_width="1dp" android:layout_height="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnEmergency" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/send_sos" style="@style/Widget.DMM.Button.Emergency"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRecordVoice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/add_voice" style="@style/Widget.Material3.Button.TonalButton" app:icon="@drawable/ic_mic"/>
+        <TextView android:id="@+id/tvVoiceBadge" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/voice_ready_body" android:textColor="@color/success_ink" android:drawableStart="@drawable/ic_check_circle" android:drawablePadding="8dp" android:textAppearance="@style/Text.DMM.Body" android:visibility="gone" android:paddingTop="4dp" android:accessibilityLiveRegion="polite"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnClearVoice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/remove_voice" style="@style/Widget.Material3.Button.TextButton" android:visibility="gone"/>
+        <TextView android:id="@+id/tvLocationStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/location_optional" android:textColor="@color/info" android:textAppearance="@style/Text.DMM.Body" android:textSize="12sp" android:gravity="center" android:paddingTop="8dp"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/your_circle" android:textAppearance="@style/Text.DMM.Section"/>
+        <TextView android:id="@+id/tvCircleSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/empty_circle_body" android:textAppearance="@style/Text.DMM.Body" android:paddingBottom="12dp"/>
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/homeContactsProgress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true"/>
+        <TextView android:id="@+id/homeContactsState" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="@style/Text.DMM.Body" android:paddingVertical="12dp" android:visibility="gone"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnHomeRetry" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/retry" android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerHomeContacts" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnViewCircle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/manage_contacts" style="@style/Widget.Material3.Button.OutlinedButton" app:icon="@drawable/ic_circle"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnOpenProtection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/protection_home_action" style="@style/Widget.Material3.Button.TonalButton" app:icon="@drawable/ic_shield"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_title" android:textAppearance="@style/Text.DMM.Section"/>
+                <Space android:layout_width="1dp" android:layout_height="8dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_body" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReviewSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/review_setup" style="@style/Widget.Material3.Button.TextButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

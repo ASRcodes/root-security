@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_online_title">ਆਨਲਾਈਨ ਲਿੰਕ ਸੁਰੱਖਿਆ</string>
+    <string name="sk_online_description">Google Safe Browsing ਦੀ ਖ਼ਤਰੇ ਦੀ ਜਾਣਕਾਰੀ ਨਾਲ ਲਿੰਕ ਜਾਂਚੋ। ਸੁਨੇਹੇ ਦੀ ਸਥਾਨਕ ਜਾਂਚ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਵੀ ਹੁੰਦੀ ਹੈ।</string>
+    <string name="sk_online_disclosure">ਚਾਲੂ ਹੋਣ ਉੱਤੇ ਫ਼ੋਨ URL ਹੈਸ਼ ਦੇ ਛੋਟੇ ਹਿੱਸੇ Google ਨੂੰ ਭੇਜਦਾ ਹੈ। ਸੁਨੇਹਾ ਅਤੇ ਪੂਰਾ URL ਨਹੀਂ ਭੇਜੇ ਜਾਂਦੇ। Google ਤੁਹਾਡਾ IP ਪਤਾ ਅਤੇ ਬੇਨਤੀ ਦੀ ਜਾਣਕਾਰੀ ਵੇਖ ਸਕਦਾ ਹੈ। ਤੁਹਾਡੀ API ਕੁੰਜੀ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਇਨਕ੍ਰਿਪਟ ਕਰਕੇ ਰੱਖੀ ਜਾਂਦੀ ਹੈ।</string>
+    <string name="sk_online_limitations">Google ਦੀ ਸੂਚੀ ਵਾਲੇ ਖ਼ਤਰਿਆਂ ਲਈ ਸਲਾਹ Google ਦਿੰਦਾ ਹੈ। ਪਛਾਣ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਹੈ। ਕੋਈ ਮੇਲ ਨਾ ਮਿਲਣ ਦਾ ਅਰਥ ਜਾਣਿਆ ਖ਼ਤਰਾ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਲਿੰਕ ਸੁਰੱਖਿਅਤ ਹੋਣ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ।</string>
+    <string name="sk_online_noncommercial">ਇਹ ਪ੍ਰੋਟੋਟਾਈਪ ਗੈਰ-ਵਪਾਰਕ Safe Browsing API ਵਰਤਦਾ ਹੈ। ਵਪਾਰਕ ਵਰਜਨ ਲਈ ਢੁੱਕਵੇਂ ਲਾਇਸੰਸ ਵਾਲੀ ਸੇਵਾ ਚਾਹੀਦੀ ਹੈ।</string>
+    <string name="sk_online_needs_key">ਆਨਲਾਈਨ ਜਾਂਚ ਲਈ Safe Browsing API ਕੁੰਜੀ ਚਾਹੀਦੀ ਹੈ। ਇਸ ਨੂੰ ਸੁਰੱਖਿਆ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜੋੜੋ।</string>
+    <string name="sk_online_disabled">ਆਨਲਾਈਨ ਜਾਂਚ ਬੰਦ ਹੈ। ਸਿਰਫ਼ ਸਥਾਨਕ ਜਾਂਚ ਉਪਲਬਧ ਹੈ।</string>
+    <string name="sk_online_enabled">ਆਨਲਾਈਨ ਜਾਂਚ ਚਾਲੂ ਹੈ। ਹਰ ਨਤੀਜਾ ਦੱਸੇਗਾ ਕਿ ਆਨਲਾਈਨ ਜਾਂਚ ਪੂਰੀ ਹੋਈ ਜਾਂ ਨਹੀਂ।</string>
+    <string name="sk_online_key_label">Safe Browsing API ਕੁੰਜੀ</string>
+    <string name="sk_online_key_hint">ਆਪਣੇ Google Cloud ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ Safe Browsing API ਚਾਲੂ ਕਰੋ ਅਤੇ ਕੁੰਜੀ ਨੂੰ ਉਸੇ API ਤੱਕ ਸੀਮਿਤ ਰੱਖੋ। ਇਸ ਨੂੰ ਸਕ੍ਰੀਨਸ਼ਾਟ ਜਾਂ ਸੁਨੇਹੇ ਵਿੱਚ ਸਾਂਝਾ ਨਾ ਕਰੋ।</string>
+    <string name="sk_online_save_enable">ਕੁੰਜੀ ਸੰਭਾਲੋ ਅਤੇ ਆਨਲਾਈਨ ਜਾਂਚ ਚਾਲੂ ਕਰੋ</string>
+    <string name="sk_online_disable">ਆਨਲਾਈਨ ਜਾਂਚ ਬੰਦ ਕਰੋ</string>
+    <string name="sk_online_enable_saved">ਸੰਭਾਲੀ ਕੁੰਜੀ ਨਾਲ ਚਾਲੂ ਕਰੋ</string>
+    <string name="sk_online_remove_key">ਸੰਭਾਲੀ ਕੁੰਜੀ ਹਟਾਓ</string>
+    <string name="sk_online_setting_saved">ਚੋਣ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਸੰਭਾਲੀ ਗਈ। ਸੇਵਾ ਦੀ ਪਹੁੰਚ ਜਾਂਚਣ ਲਈ ਕੋਈ ਲਿੰਕ ਸਕੈਨ ਕਰੋ।</string>
+    <string name="sk_online_configuration_failed">ਇਹ ਚੋਣ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਕੁੰਜੀ ਜਾਂਚੋ ਜਾਂ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="sk_online_setup_help">Google API ਸੈਟਅੱਪ ਹਦਾਇਤਾਂ</string>
+    <string name="sk_online_manual_detail">ਸੁਨੇਹਾ ਜਾਂ ਲਿੰਕ ਪੇਸਟ ਕਰੋ। ਪਹਿਲਾਂ ਸਥਾਨਕ ਜਾਂਚ ਹੁੰਦੀ ਹੈ। ਆਨਲਾਈਨ ਸੇਵਾ ਚਾਲੂ ਅਤੇ ਸੈੱਟ ਹੋਣ ਉੱਤੇ ਹੀ ਆਨਲਾਈਨ ਜਾਂਚ ਹੁੰਦੀ ਹੈ। ਲਿੰਕ ਨਹੀਂ ਖੋਲ੍ਹੇ ਜਾਂਦੇ।</string>
+    <string name="sk_online_scan_failed">ਜਾਂਚ ਪੂਰੀ ਨਹੀਂ ਹੋਈ। ਸੁਰੱਖਿਆ ਦਾ ਨਤੀਜਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="sk_online_possible_threat">ਸੰਭਵ ਤੌਰ ਉੱਤੇ ਨੁਕਸਾਨਦੇਹ ਲਿੰਕ</string>
+    <string name="sk_online_unconfirmed_pattern">ਸ਼ੱਕੀ ਸੰਕੇਤ, ਹਾਲੇ ਪੁਸ਼ਟੀ ਨਹੀਂ</string>
+    <string name="sk_online_not_checked">ਆਨਲਾਈਨ ਜਾਂਚ ਪੂਰੀ ਨਹੀਂ ਹੋਈ</string>
+    <string name="sk_online_no_known_threat">ਕੋਈ ਜਾਣਿਆ ਖ਼ਤਰਾ ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="sk_online_some_unchecked">ਘੱਟੋ-ਘੱਟ ਇੱਕ ਹੋਰ ਲਿੰਕ ਦੀ ਆਨਲਾਈਨ ਜਾਂਚ ਨਹੀਂ ਹੋ ਸਕੀ।</string>
+    <string name="sk_online_redirect_scope">ਸਿਰਫ਼ ਦਿੱਤਾ ਲਿੰਕ ਜਾਂਚਿਆ ਜਾਂਦਾ ਹੈ। ਛੋਟੇ ਲਿੰਕ ਦੇ ਰੀਡਾਇਰੈਕਟ ਅਤੇ ਆਖ਼ਰੀ ਵੈੱਬਸਾਈਟ ਨੂੰ ਖੋਲ੍ਹ ਕੇ ਜਾਂਚਿਆ ਨਹੀਂ ਜਾਂਦਾ।</string>
+    <string name="sk_online_local_history">ਸੁਨੇਹਾ ਸਿਰਫ਼ ਅਸਥਾਈ ਮੈਮੋਰੀ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ, ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾਂਦਾ। ਇਸ ਫ਼ੋਨ ਦਾ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ ਇਤਿਹਾਸ ਸਿਰਫ਼ ਖ਼ਤਰੇ ਦੇ ਨਤੀਜੇ, ਡੋਮੇਨ ਨਾਮ, ਸਮਾਂ ਅਤੇ ਕਾਰਨ ਰੱਖਦਾ ਹੈ। ਆਨਲਾਈਨ ਜਾਂਚ ਵਿੱਚ URL ਹੈਸ਼ ਦੇ ਹਿੱਸੇ ਭੇਜੇ ਜਾਂਦੇ ਹਨ, ਸੁਨੇਹਾ ਜਾਂ ਪੂਰਾ URL ਨਹੀਂ।</string>
+    <string name="sk_demo_lab">ਡੈਮੋ ਲੈਬ</string>
+    <string name="sk_demo_lab_detail">ਉਦਾਹਰਨਾਂ ਅਸਲੀ ਡਿਟੈਕਟਰ ਅਤੇ ਸੈੱਟ ਕੀਤੀ ਆਨਲਾਈਨ ਸੇਵਾ ਨਾਲ ਜਾਂਚੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਉਦਾਹਰਨ ਭਰਨ ਨਾਲ ਜਾਂਚ ਸ਼ੁਰੂ ਨਹੀਂ ਹੁੰਦੀ। ਚੇਤਾਵਨੀ ਦਾ ਪ੍ਰੀਵਿਊ ਵੱਖਰਾ ਸਿਮੂਲੇਸ਼ਨ ਹੈ।</string>
+    <string name="sk_demo_inputs">ਉਦਾਹਰਨ ਭਰੋ</string>
+    <string name="sk_demo_inputs_detail">ਉਦਾਹਰਨ ਚੁਣੋ, ਫਿਰ ਇਸ ਸੁਨੇਹੇ ਦੀ ਜਾਂਚ ਕਰੋ ਦਬਾਓ। ਲਿੰਕ ਬੰਦ ਰਹਿੰਦੇ ਹਨ। Google ਦਾ ਟੈਸਟ ਪੇਜ ਨੁਕਸਾਨ ਰਹਿਤ ਹੈ ਅਤੇ ਚੇਤਾਵਨੀ ਜਾਂਚਣ ਲਈ ਬਣਿਆ ਹੈ। ਕੋਈ ਨਤੀਜਾ ਪਹਿਲਾਂ ਤੋਂ ਤੈਅ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।</string>
+    <string name="sk_demo_airtel">Airtel ਦੀ ਉਦਾਹਰਨ ਭਰੋ</string>
+    <string name="sk_demo_goodmonk">Good Monk ਦਾ ਛੋਟਾ ਲਿੰਕ ਭਰੋ</string>
+    <string name="sk_demo_google_test">Google ਦਾ ਫ਼ਿਸ਼ਿੰਗ ਟੈਸਟ URL ਭਰੋ</string>
+    <string name="sk_demo_ordinary_message">ਸਧਾਰਨ ਸੁਨੇਹਾ ਭਰੋ</string>
+    <string name="sk_demo_kyc_scam">ਬੈਂਕ KYC ਠੱਗੀ ਭਰੋ (ਨਕਲੀ SBI ਲਿੰਕ)</string>
+    <string name="sk_demo_apk_scam">ਨਕਲੀ ਐਪ ਡਾਊਨਲੋਡ ਭਰੋ (APK)</string>
+    <string name="sk_demo_lookalike">ਮਿਲਦੀ-ਜੁਲਦੀ ਨਕਲੀ ਵੈੱਬਸਾਈਟ ਭਰੋ (paypa1)</string>
+    <string name="sk_demo_preview_title">ਚੇਤਾਵਨੀ ਸਕ੍ਰੀਨ ਦਾ ਟੈਸਟ</string>
+    <string name="sk_demo_preview_detail">ਸਿਰਫ਼ ਸਿਮੂਲੇਸ਼ਨ। ਇਹ ਚੇਤਾਵਨੀ ਸਕ੍ਰੀਨ ਜਾਂਚਦਾ ਹੈ, ਲਿੰਕ ਦੀ ਪਛਾਣ ਨਹੀਂ। ਇਹ ਲਿੰਕ ਦਾ ਮੁਲਾਂਕਣ ਨਹੀਂ ਕਰਦਾ ਅਤੇ ਸਰਪ੍ਰਸਤ ਨੂੰ SMS ਨਹੀਂ ਭੇਜਦਾ।</string>
+    <string name="sk_demo_preview_button">ਟੈਸਟ ਚੇਤਾਵਨੀ ਵੇਖੋ</string>
+</resources>

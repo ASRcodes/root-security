@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_online_title">ऑनलाइन लिंक सुरक्षा</string>
+    <string name="sk_online_description">Google Safe Browsing की ख़तरे की जानकारी से लिंक जाँचें। संदेश की स्थानीय जाँच इस फ़ोन पर भी होती है।</string>
+    <string name="sk_online_disclosure">चालू होने पर फ़ोन URL हैश के छोटे हिस्से Google को भेजता है। संदेश और पूरे URL नहीं भेजे जाते। Google आपका IP पता और अनुरोध की जानकारी देख सकता है। आपकी API कुंजी इस फ़ोन पर एन्क्रिप्ट करके रखी जाती है।</string>
+    <string name="sk_online_limitations">Google की सूची में दर्ज ख़तरों के लिए सलाह Google देता है। पहचान की गारंटी नहीं है। कोई मेल न मिलने का मतलब ज्ञात ख़तरा नहीं मिला है, लिंक सुरक्षित होने की गारंटी नहीं।</string>
+    <string name="sk_online_noncommercial">यह प्रोटोटाइप गैर-व्यावसायिक Safe Browsing API उपयोग करता है। व्यावसायिक संस्करण के लिए उचित लाइसेंस वाली सेवा चाहिए।</string>
+    <string name="sk_online_needs_key">ऑनलाइन जाँच के लिए Safe Browsing API कुंजी चाहिए। इसे सुरक्षा सेटिंग में जोड़ें।</string>
+    <string name="sk_online_disabled">ऑनलाइन जाँच बंद है। केवल स्थानीय जाँच उपलब्ध है।</string>
+    <string name="sk_online_enabled">ऑनलाइन जाँच चालू है। हर नतीजे में दिखेगा कि ऑनलाइन जाँच पूरी हुई या नहीं।</string>
+    <string name="sk_online_key_label">Safe Browsing API कुंजी</string>
+    <string name="sk_online_key_hint">अपने Google Cloud प्रोजेक्ट में Safe Browsing API चालू करें और कुंजी को उसी API तक सीमित रखें। इसे स्क्रीनशॉट या संदेश में साझा न करें।</string>
+    <string name="sk_online_save_enable">कुंजी सहेजें और ऑनलाइन जाँच चालू करें</string>
+    <string name="sk_online_disable">ऑनलाइन जाँच बंद करें</string>
+    <string name="sk_online_enable_saved">सहेजी गई कुंजी से चालू करें</string>
+    <string name="sk_online_remove_key">सहेजी गई कुंजी हटाएँ</string>
+    <string name="sk_online_setting_saved">पसंद इस फ़ोन पर सहेजी गई। सेवा की पहुँच जाँचने के लिए कोई लिंक स्कैन करें।</string>
+    <string name="sk_online_configuration_failed">यह पसंद सहेजी नहीं जा सकी। कुंजी जाँचें या फिर कोशिश करें।</string>
+    <string name="sk_online_setup_help">Google API सेटअप के निर्देश</string>
+    <string name="sk_online_manual_detail">संदेश या लिंक पेस्ट करें। पहले स्थानीय जाँच होती है। ऑनलाइन सेवा चालू और सेट होने पर ही ऑनलाइन जाँच होती है। लिंक नहीं खोले जाते।</string>
+    <string name="sk_online_scan_failed">जाँच पूरी नहीं हुई। सुरक्षा का नतीजा उपलब्ध नहीं है। फिर कोशिश करें।</string>
+    <string name="sk_online_possible_threat">संभवतः हानिकारक लिंक</string>
+    <string name="sk_online_unconfirmed_pattern">संदिग्ध संकेत, अभी पुष्टि नहीं</string>
+    <string name="sk_online_not_checked">ऑनलाइन जाँच पूरी नहीं हुई</string>
+    <string name="sk_online_no_known_threat">कोई ज्ञात ख़तरा नहीं मिला</string>
+    <string name="sk_online_some_unchecked">कम से कम एक और लिंक की ऑनलाइन जाँच नहीं हो सकी।</string>
+    <string name="sk_online_redirect_scope">केवल दिया गया लिंक जाँचा जाता है। छोटे लिंक के रीडायरेक्ट और अंतिम वेबसाइट को खोलकर जाँचा नहीं जाता।</string>
+    <string name="sk_online_local_history">संदेश केवल अस्थायी मेमोरी में रहता है, सहेजा नहीं जाता। इस फ़ोन का एन्क्रिप्ट किया इतिहास केवल ख़तरे के नतीजे, डोमेन नाम, समय और कारण रखता है। ऑनलाइन जाँच में URL हैश के हिस्से भेजे जाते हैं, संदेश या पूरा URL नहीं।</string>
+    <string name="sk_demo_lab">डेमो लैब</string>
+    <string name="sk_demo_lab_detail">उदाहरण असली डिटेक्टर और सेट की गई ऑनलाइन सेवा से जाँचे जाते हैं। उदाहरण भरने से जाँच शुरू नहीं होती। चेतावनी का पूर्वावलोकन अलग अनुकरण है।</string>
+    <string name="sk_demo_inputs">उदाहरण भरें</string>
+    <string name="sk_demo_inputs_detail">उदाहरण चुनें, फिर इस संदेश की जाँच करें दबाएँ। लिंक बंद रहते हैं। Google का परीक्षण पेज हानिरहित है और चेतावनी जाँचने के लिए बना है। किसी नतीजे को पहले से तय नहीं किया गया है।</string>
+    <string name="sk_demo_airtel">Airtel का उदाहरण भरें</string>
+    <string name="sk_demo_goodmonk">Good Monk का छोटा लिंक भरें</string>
+    <string name="sk_demo_google_test">Google का फ़िशिंग परीक्षण URL भरें</string>
+    <string name="sk_demo_ordinary_message">साधारण संदेश भरें</string>
+    <string name="sk_demo_kyc_scam">बैंक KYC ठगी भरें (नकली SBI लिंक)</string>
+    <string name="sk_demo_apk_scam">नकली ऐप डाउनलोड भरें (APK)</string>
+    <string name="sk_demo_lookalike">मिलती-जुलती नकली वेबसाइट भरें (paypa1)</string>
+    <string name="sk_demo_preview_title">चेतावनी स्क्रीन का परीक्षण</string>
+    <string name="sk_demo_preview_detail">केवल अनुकरण। यह चेतावनी स्क्रीन जाँचता है, लिंक की पहचान नहीं। यह लिंक का आकलन नहीं करता और अभिभावक को SMS नहीं भेजता।</string>
+    <string name="sk_demo_preview_button">परीक्षण चेतावनी देखें</string>
+</resources>

@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-21",
+  "application_id": "com.asrcodes.dontmissmom",
+  "version_code": 6,
+  "version_name": "3.0-mvp",
+  "apk_sha256": "1e6fbbeffca2ea4983d00633db5cf776718f2be6cd88dc9037bb0bef3ea11b4b",
+  "apk_bytes": 52557385,
+  "debug_build": "passed",
+  "unit_tests": {
+    "protection-core": {
+      "tests": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "lint": {
+    "app": {
+      "errors": 0,
+      "warnings": 112
+    },
+    "protection": {
+      "errors": 0,
+      "warnings": 27
+    }
+  },
+  "single_launcher": "com.asrcodes.dontmissmom.LoginActivity",
+  "native_libraries_16kb_aligned": 12,
+  "apk_zip_alignment_16kb": "passed",
+  "unchanged_model_data_notice_assets": 9,
+  "device_tests": {
+    "api36": {
+      "distinct_tests": 30,
+      "passed": true,
+      "cases": [
+        "com.asrcodes.dontmissmom.FirstLaunchPermissionsTest#firstLaunchSupportsSkipDenialGrantAndRotationWithoutRepeatingSetup",
+        "com.asrcodes.dontmissmom.FirstLaunchPermissionsTest#incomingHistoryRouteSurvivesPermissionSetupForSignedInUser",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#backgroundScamWarningDoesNotCoverAnEmergencyPopup",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#bundledModelsDistinguishTrustedLinksFromScamsWithoutEnhancedDownloads",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#clearingProtectionKeepsHostSessionEmergencySettingsAndHistory",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#combinedApplicationKeepsOneDontMissMomLauncher",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending",
+        "com.asrcodes.dontmissmom.SirenTimeoutTest#unansweredSirenStopsAfterFiveRealMinutesAndHistoryRemains",
+        "com.asrcodes.dontmissmom.V2UiTest#aRejectedStatusCheckCannotDiscardAnEarlierUnconfirmedAlertId",
+        "com.asrcodes.dontmissmom.V2UiTest#alertAllCapturesVoiceAndWaitsForEveryBackendResult",
+        "com.asrcodes.dontmissmom.V2UiTest#allHistoryIsAccessibleInPagesAndLoadedWindowSurvivesRotation",
+        "com.asrcodes.dontmissmom.V2UiTest#blockedContactsAreExcludedAndFailedSendKeepsVoice",
+        "com.asrcodes.dontmissmom.V2UiTest#bottomNavigationBackAndRotationKeepTheCorrectPage",
+        "com.asrcodes.dontmissmom.V2UiTest#captureProductionLayoutsInLightAndDarkThemes",
+        "com.asrcodes.dontmissmom.V2UiTest#contactsSendIndependentlyAndSameContactCannotBeSubmittedTwice",
+        "com.asrcodes.dontmissmom.V2UiTest#definiteVoiceRejectionAllowsANewRecordingWithoutReusingRejectedAttachment",
+        "com.asrcodes.dontmissmom.V2UiTest#emptyCircleAndInvalidPhoneHaveActionableStates",
+        "com.asrcodes.dontmissmom.V2UiTest#failedContactRetainsItsIdAndAttachmentWhileAnotherContactSends",
+        "com.asrcodes.dontmissmom.V2UiTest#historyCardsAndEmptyStateWorkInBothThemesAndSurviveRotation",
+        "com.asrcodes.dontmissmom.V2UiTest#historyShowsSentReceivedAndEveryOutcomeEvenWithoutAudio",
+        "com.asrcodes.dontmissmom.V2UiTest#homeContactActionRequiresConfirmationAndUsesExistingSender",
+        "com.asrcodes.dontmissmom.V2UiTest#landscapeKeepsNavigationAndScrolledActionsReachable",
+        "com.asrcodes.dontmissmom.V2UiTest#newAlertReplacesVisibleSenderAndMissingActionsAreDisabled",
+        "com.asrcodes.dontmissmom.V2UiTest#recreationKeepsPendingSendAndFinishingCancelsIt",
+        "com.asrcodes.dontmissmom.V2UiTest#requestAcceptanceRemovesTheCardAndShowsEmptyState",
+        "com.asrcodes.dontmissmom.V2UiTest#requestChannelAndBackgroundTapIntentAreConfigured",
+        "com.asrcodes.dontmissmom.V2UiTest#requestNotificationOpensRequestsAndReportRemovesThePendingRequest",
+        "com.asrcodes.dontmissmom.V2UiTest#retryOnlySendsUnconfirmedContactsWithOriginalIdsAndAttachment"
+      ]
+    },
+    "api26_dark": {
+      "distinct_tests": 7,
+      "passed": true,
+      "cases": [
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#backgroundScamWarningDoesNotCoverAnEmergencyPopup",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#bundledModelsDistinguishTrustedLinksFromScamsWithoutEnhancedDownloads",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#clearingProtectionKeepsHostSessionEmergencySettingsAndHistory",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#combinedApplicationKeepsOneDontMissMomLauncher",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable",
+        "com.asrcodes.dontmissmom.ProtectionIntegrationTest#sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending"
+      ]
+    }
+  },
+  "test_isolation": "Read-only emulators, fake emergency repository, in-memory guardian SMS sender.",
+  "notes": [
+    "API 36 permission test passed after a test-only accessibility-click correction; initial failure and rerun are retained in the logs.",
+    "The protection reset assertion was strengthened and rerun; production APK unchanged.",
+    "Physical-phone carrier SMS, notifications, OEM background behavior and timing remain unverified."
+  ]
+}

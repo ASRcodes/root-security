@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <queries>
+        <intent><action android:name="android.provider.Telephony.SMS_DELIVER" /></intent>
+        <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent>
+    </queries>
+    <application>
+        <activity android:name="org.suraksha.kavach.MainActivity" android:exported="false"
+            android:theme="@style/sk_Theme_Kavach" android:label="@string/sk_app_name" />
+        <activity android:name="org.suraksha.kavach.ShareFileActivity" android:exported="true" android:excludeFromRecents="true"
+            android:theme="@style/sk_Theme_Kavach" android:label="@string/sk_share_label">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" android:mimeType="application/vnd.android.package-archive" />
+            </intent-filter>
+        </activity>
+        <service android:name="org.suraksha.kavach.files.FolderWatchJob" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
+        <activity android:name="org.suraksha.kavach.AlertActivity"
+            android:theme="@style/sk_Theme_Kavach"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop" />
+        <service android:name="org.suraksha.kavach.notifications.KavachNotificationListener"
+            android:exported="true"
+            android:label="@string/sk_app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service android:name="org.suraksha.kavach.data.RetentionJob" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" />
+        <receiver android:name="org.suraksha.kavach.family.GuardianSmsResult" android:exported="false" />
+        <service android:name="org.suraksha.kavach.calls.ScamCallScreeningService"
+            android:exported="true"
+            android:permission="android.permission.BIND_SCREENING_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.CallScreeningService" />
+            </intent-filter>
+        </service>
+        <receiver android:name="org.suraksha.kavach.calls.ReportCallerReceiver" android:exported="false" />
+    </application>
+</manifest>

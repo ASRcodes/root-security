@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/disclosureRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/app_name" android:textAppearance="@style/Text.DMM.Label"/>
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+        <LinearLayout android:id="@+id/runtimePermissionStep" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/disclosure_title" android:textAppearance="@style/Text.DMM.Title"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/disclosure_body" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notifications" android:textAppearance="@style/Text.DMM.Section"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/setup_notification_disclosure" android:textAppearance="@style/Text.DMM.Body"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/location_title" android:textAppearance="@style/Text.DMM.Section"/>
+                <Space android:layout_width="1dp" android:layout_height="10dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/location_disclosure" android:textAppearance="@style/Text.DMM.Body"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="16dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/voice_title" android:textAppearance="@style/Text.DMM.Section"/>
+                <Space android:layout_width="1dp" android:layout_height="10dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/voice_disclosure" android:textAppearance="@style/Text.DMM.Body"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/permission_choice" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnContinue" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_permissions"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnDecline" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/not_now" style="@style/Widget.Material3.Button.TextButton"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/deliveryPermissionStep" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_delivery_title" android:textAppearance="@style/Text.DMM.Title"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/setup_delivery_body" android:textAppearance="@style/Text.DMM.Body"/>
+            <LinearLayout android:id="@+id/setupNotifications" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_notifications_disabled" android:textAppearance="@style/Text.DMM.Body"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSetupNotifications" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notifications"/>
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dnd" android:textAppearance="@style/Text.DMM.Section"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/dnd_body" android:textAppearance="@style/Text.DMM.Body"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnSetupDnd" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_dnd"/>
+                    <TextView android:id="@+id/setupDndStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="@style/Text.DMM.Label"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/setupFullScreen" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/full_screen" android:textAppearance="@style/Text.DMM.Section"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/full_screen_body" android:textAppearance="@style/Text.DMM.Body"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnSetupFullScreen" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_full_screen"/>
+                    <TextView android:id="@+id/setupFullScreenStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="@style/Text.DMM.Label"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/permission_choice" android:textAppearance="@style/Text.DMM.Body"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnFinishSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/continue_to_app"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

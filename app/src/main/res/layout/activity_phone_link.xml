@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/phoneRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/account" android:textAppearance="@style/Text.DMM.Label"/>
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/phone_title" android:textAppearance="@style/Text.DMM.Title"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/phone_body" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="28dp"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/phoneInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/phone_label" app:prefixText="+91 ">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhoneLink" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" android:autofillHints="phone" android:imeOptions="actionDone" android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/phone_help" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="28dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSavePhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/phone_save"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/tvDifferentAccount" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/different_account" style="@style/Widget.Material3.Button.TextButton"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

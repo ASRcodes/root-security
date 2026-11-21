@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_demo_walkthrough_detail">Choose an example, read its expected local behavior, then tap Check this message. Loading, copying or sharing an example never runs a scan. Every scan uses the real checker; the separate alert preview is a simulation.</string>
+    <string name="sk_demo_normal_label">1 · Load normal Wikipedia link</string>
+    <string name="sk_demo_caution_label">2 · Load harmless caution example</string>
+    <string name="sk_demo_danger_label">3 · Load harmless high-risk example</string>
+    <string name="sk_demo_selected_input">Selected example</string>
+    <string name="sk_demo_normal_expected">Expected local result: no warning. If the online lookup cannot complete, the result stays Not checked. Only a completed lookup can say No known threat found; neither result guarantees safety.</string>
+    <string name="sk_demo_caution_expected">Expected local result: caution, without a full-screen alarm. This reserved .example address is a harmless input for the local rules, not a confirmed malicious website.</string>
+    <string name="sk_demo_danger_expected">Expected local result: a high-risk warning from the combined message and URL clues. The reserved .example link is harmless; this exercises the real local rules, not a Google-confirmed threat.</string>
+    <string name="sk_demo_google_expected">Google provider test: needs a working API key and a real threat match from Google. Not checked means the live lookup did not complete. This official test is separate from the local-rule examples.</string>
+    <string name="sk_demo_copy">Copy example</string>
+    <string name="sk_demo_share">Share example</string>
+    <string name="sk_demo_share_title">Choose where to share this example</string>
+    <string name="sk_demo_share_unavailable">No sharing app is available. Use Copy example instead.</string>
+    <string name="sk_demo_select_then_check">The editable input is below. Tap Check this message when ready. Sharing opens the Android chooser; you choose the recipient and send.</string>
+    <string name="sk_demo_reserved_badge">Harmless example · local rule check</string>
+    <string name="sk_demo_reserved_detail">This .example address is reserved for examples. The app evaluated its message and link clues using the normal local rules. This is not a Google-verified threat. Guardian actions are disabled for this test input.</string>
+    <string name="sk_demo_danger_title">High-risk pattern · test link</string>
+    <string name="sk_demo_caution_title">Caution pattern · test link</string>
+    <string name="sk_demo_normal_title">Harmless example · local result</string>
+    <string name="sk_demo_local_no_warning">Local checks found no warning signs. This does not certify the link as safe.</string>
+    <string name="sk_demo_notification_help">Incoming-message rehearsal: enable Notification access and automatic protection. Have a consenting helper send the example to this phone through a supported SMS or WhatsApp notification. Keep that conversation closed so a preview appears. Hidden previews cannot be checked. Android may require the app overlay permission and its warning switch for a full-screen interruption.</string>
+    <string name="sk_demo_call_help">Call Shield is separate: enable its call-screening role in Protection settings on supported Android 10+ phones. Test with a consenting caller. It gives caller-ID advice; it does not hear calls or detect cloned voices.</string>
+</resources>

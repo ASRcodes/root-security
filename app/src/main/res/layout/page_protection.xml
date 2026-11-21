@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/protectionPage"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/protection_eyebrow" android:textAppearance="@style/Text.DMM.Label" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="@string/protection_title" android:textAppearance="@style/Text.DMM.Title" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:layout_marginBottom="20dp"
+            android:text="@string/protection_subtitle" android:textAppearance="@style/Text.DMM.Body" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:id="@+id/tvProtectionStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_loading" android:textAppearance="@style/Text.DMM.Section"
+                    android:accessibilityLiveRegion="polite" />
+                <TextView android:id="@+id/tvProtectionDetail"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="@string/protection_loading_detail"
+                    android:textAppearance="@style/Text.DMM.Body" />
+                <TextView android:id="@+id/tvProtectionModelStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:textAppearance="@style/Text.DMM.Body" />
+                <TextView android:id="@+id/tvProtectionListenerStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:textAppearance="@style/Text.DMM.Body" />
+                <TextView android:id="@+id/tvProtectionStorageStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:textAppearance="@style/Text.DMM.Body" />
+                <TextView android:id="@+id/tvProtectionOnlineStatus"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:textAppearance="@style/Text.DMM.Body" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionSetup"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" android:text="@string/protection_review" app:icon="@drawable/ic_shield" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionRetry"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_retry" android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="@string/protection_check_title" android:textAppearance="@style/Text.DMM.Section" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:layout_marginBottom="10dp"
+            android:text="@string/protection_check_body" android:textAppearance="@style/Text.DMM.Body" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionCheck"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/protection_check" app:icon="@drawable/ic_shield" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionFiles"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/protection_files" app:icon="@drawable/ic_check_circle" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="@string/protection_offline"
+            android:textAppearance="@style/Text.DMM.Body" android:textColor="@color/info" />
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_family_title" android:textAppearance="@style/Text.DMM.Section" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:layout_marginBottom="10dp"
+                    android:text="@string/protection_family_body" android:textAppearance="@style/Text.DMM.Body" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionCall"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_call" app:icon="@drawable/ic_phone" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionCode"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_code" app:icon="@drawable/ic_circle" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionGuardian"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/protection_guardian" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionHistory"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            android:text="@string/protection_history" app:icon="@drawable/ic_history" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnProtectionSettings"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/protection_settings" app:icon="@drawable/ic_settings" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:layout_marginBottom="12dp"
+            android:text="@string/protection_privacy" android:textAppearance="@style/Text.DMM.Body" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

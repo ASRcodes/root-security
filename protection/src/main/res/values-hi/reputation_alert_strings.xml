@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_google_test_badge">GOOGLE परीक्षण URL • हानिरहित परीक्षण</string>
+    <string name="sk_google_test_title">Google परीक्षण चेतावनी</string>
+    <string name="sk_google_test_detail">यह Google का हानिरहित परीक्षण पेज है। चेतावनी असली ऑनलाइन प्रतिष्ठा जाँच से मिली है। इससे परिवार संपर्क को SMS नहीं भेजा जाता।</string>
+    <string name="sk_simulation_title">चेतावनी का परीक्षण प्रदर्शन</string>
+    <string name="sk_saved_result_badge">सहेजा हुआ जाँच नतीजा</string>
+    <string name="sk_history_not_checked">जाँच नहीं हुई</string>
+    <string name="sk_history_threat_at_scan">जाँच के समय ख़तरा बताया गया</string>
+    <string name="sk_history_no_match">जाँच के समय कोई ज्ञात ख़तरा नहीं</string>
+    <string name="sk_history_expired_threat">दर्ज समय पर Google ने संभावित ख़तरा बताया था। वह नतीजा पुराना हो गया है और मौजूदा चेतावनी नहीं है।</string>
+    <string name="sk_google_history_attribution">Advisory provided by Google. यह दर्ज नतीजा गलत हो सकता है और बदल सकता है।</string>
+    <string name="sk_no_match_guarantee">पहले ख़तरा न मिलने से अब लिंक के सुरक्षित होने की गारंटी नहीं मिलती।</string>
+    <string name="sk_reputation_expired_detail">इस नतीजे पर भरोसा करने से पहले नई ऑनलाइन जाँच करें। Google के नतीजे अधिकतम 30 मिनट तक उपयोग होते हैं। अमान्य समय होने पर भी नतीजा समाप्त हो जाता है।</string>
+    <string name="sk_not_checked_advice">मौजूदा ऑनलाइन नतीजा उपलब्ध नहीं है। ऑनलाइन सुरक्षा सेटिंग देखें और लिंक दोबारा जाँचें। स्रोत की पुष्टि होने तक पासवर्ड, OTP या भुगतान जानकारी न दें।</string>
+</resources>

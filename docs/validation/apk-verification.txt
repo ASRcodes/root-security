@@ -1,0 +1,20 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: 25c5547cb18e66684d106e54d514db0b9d0a41288d903b81a54289b7d665d588
+Signer #1 certificate SHA-1 digest: a8eda605ecc671ca8126f13a2c9a4b22a5f2e715
+Signer #1 certificate MD5 digest: ed6583f8b209652568aab0947c91290b
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 3a0baba14f33f246661ea11a0313f437ea104cce4bb905c832f2b7885f29e9be
+Signer #1 public key SHA-1 digest: fd3999f71543bff78b5184c92115d86fb5696dad
+Signer #1 public key MD5 digest: 5f74a697061cbbd5fe574421543da1f9
+
+zipalign -c -P 16 4: passed
+package: name='com.asrcodes.dontmissmom' versionCode='8' versionName='3.2-final' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'

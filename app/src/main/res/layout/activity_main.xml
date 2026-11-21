@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mainRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background">
+    <TextView android:id="@+id/offlineBanner" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/offline" android:textAppearance="@style/Text.DMM.Body" android:visibility="gone" android:background="@color/warning_soft" android:textColor="@color/warning_ink" android:drawableStart="@drawable/ic_warning" android:drawablePadding="10dp" android:padding="12dp" android:accessibilityLiveRegion="polite"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <include layout="@layout/page_home"/>
+        <include layout="@layout/page_circle" android:id="@+id/circlePage" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <include layout="@layout/page_protection" android:id="@+id/protectionPage" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <include layout="@layout/page_history" android:id="@+id/historyPage" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <include layout="@layout/page_settings" android:id="@+id/settingsPage" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/bottomNavigation" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/surface" android:elevation="4dp" app:itemActiveIndicatorStyle="@style/Widget.DMM.NavigationIndicator" app:menu="@menu/main_bottom_nav" app:labelVisibilityMode="labeled" app:itemIconTint="@color/nav_item_color" app:itemTextColor="@color/nav_item_color"/>
+</LinearLayout>

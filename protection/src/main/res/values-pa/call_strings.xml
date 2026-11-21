@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_call_channel">ਕਾਲਰ ਸਾਵਧਾਨੀਆਂ</string>
+    <string name="sk_call_title_high">ਤੁਹਾਡੇ ਵੱਲੋਂ ਰਿਪੋਰਟ ਕੀਤਾ ਨੰਬਰ</string>
+    <string name="sk_call_title_caution">ਕਾਲਰ ਦੀ ਪਛਾਣ ਜਾਂਚੋ</string>
+    <string name="sk_call_reason_hidden">ਕਾਲਰ ਦੀ ਪਛਾਣ ਲੁਕਾਈ ਹੋਈ ਹੈ ਜਾਂ ਉਪਲਬਧ ਨਹੀਂ। ਸਿਰਫ਼ ਇਸ ਨਾਲ ਧੋਖਾਧੜੀ ਸਾਬਤ ਨਹੀਂ ਹੁੰਦੀ।</string>
+    <string name="sk_call_reason_reported">ਤੁਸੀਂ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਇਸ ਨੰਬਰ ਦੀ ਰਿਪੋਰਟ ਕੀਤੀ ਸੀ। ਕਾਲਰ ਆਈਡੀ ਨਕਲੀ ਹੋ ਸਕਦੀ ਹੈ।</string>
+    <string name="sk_call_reason_international">ਇਸ ਕਾਲਰ ਆਈਡੀ ਵਿੱਚ ਅੰਤਰਰਾਸ਼ਟਰੀ ਕੋਡ ਹੈ। ਸਿਰਫ਼ ਇਸ ਨਾਲ ਧੋਖਾਧੜੀ ਸਾਬਤ ਨਹੀਂ ਹੁੰਦੀ।</string>
+    <string name="sk_call_reason_unknown">ਅਣਜਾਣ ਕਾਲਰ ਦਾ ਮਤਲਬ ਹਮੇਸ਼ਾ ਧੋਖਾਧੜੀ ਨਹੀਂ ਹੁੰਦਾ।</string>
+    <string name="sk_call_reason_telemarketing">ਇਹ ਨੰਬਰ 140 ਪ੍ਰਚਾਰ ਕਾਲ ਲੜੀ ਦਾ ਹੈ।</string>
+    <string name="sk_call_voice_clone_advice">ਕਾਲਰ ਨੂੰ OTP ਜਾਂ ਪਾਸਵਰਡ ਨਾ ਦਿਓ। ਤੁਰੰਤ ਪੈਸੇ ਮੰਗੇ ਜਾਣ ਤਾਂ ਕਾਲ ਕੱਟ ਕੇ ਆਪਣੇ ਸੇਵ ਕੀਤੇ ਨੰਬਰ ਉੱਤੇ ਵਾਪਸ ਕਾਲ ਕਰੋ।</string>
+    <string name="sk_call_mark_scam">ਇਸ ਨੰਬਰ ਦੀ ਰਿਪੋਰਟ ਕਰੋ</string>
+    <string name="sk_call_banner_dismiss">ਬੰਦ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
+    <string name="sk_call_shield_title">ਕਾਲ ਸ਼ੀਲਡ</string>
+    <string name="sk_call_shield_detail">ਸਮਰਥਿਤ ਕਾਲ ਚੁੱਕਣ ਤੋਂ ਪਹਿਲਾਂ ਚੋਣਵੀਂ ਕਾਲਰ ਆਈਡੀ ਸਲਾਹ। ਅਣਜਾਣ ਅਤੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਨੰਬਰਾਂ ਲਈ ਸਾਵਧਾਨੀ ਦਿਖਾਈ ਜਾਂਦੀ ਹੈ। ਵੱਧ ਚੇਤਾਵਨੀ ਸਿਰਫ਼ ਤੁਹਾਡੀ ਆਪਣੀ ਰਿਪੋਰਟ ਨਾਲ ਮਿਲਦੀ ਹੈ। ਕਾਲ ਆਮ ਵਾਂਗ ਵੱਜਦੀ ਹੈ।</string>
+    <string name="sk_call_shield_unavailable">ਕਾਲ ਸਕ੍ਰੀਨਿੰਗ ਲਈ Android 10 ਜਾਂ ਨਵਾਂ ਵਰਜਨ ਅਤੇ ਸਮਰਥਿਤ ਡਿਵਾਈਸ ਚਾਹੀਦੀ ਹੈ।</string>
+    <string name="sk_call_shield_enable">Android ਕਾਲ ਸਕ੍ਰੀਨਿੰਗ ਚਾਲੂ ਕਰੋ</string>
+    <string name="sk_call_shield_switch">ਕਾਲਰ ਸਾਵਧਾਨੀਆਂ</string>
+    <string name="sk_call_shield_on">ਚਾਲੂ। Android ਆਮ ਤੌਰ ਉੱਤੇ ਸੇਵ ਕੀਤੇ ਸੰਪਰਕਾਂ ਨੂੰ ਸਕ੍ਰੀਨਿੰਗ ਤੋਂ ਬਾਹਰ ਰੱਖਦਾ ਹੈ।</string>
+    <string name="sk_call_shield_paused">ਰੋਕਿਆ ਹੋਇਆ। ਕਾਲ ਚੇਤਾਵਨੀਆਂ ਬੰਦ ਹਨ।</string>
+    <string name="sk_call_reported_count">%1$d / 200 ਸਥਾਨਕ ਰਿਪੋਰਟਾਂ</string>
+    <string name="sk_call_voice_limit">ਸਿਰਫ਼ ਕਾਲਰ ਆਈਡੀ ਨਿਯਮ: ਕਾਲ ਆਡੀਓ ਵਿਸ਼ਲੇਸ਼ਣ, ਨਕਲੀ ਆਵਾਜ਼ ਪਛਾਣ, ਆਪਣੇ ਆਪ ਬਲਾਕ ਕਰਨਾ ਜਾਂ ਰਿਕਾਰਡਿੰਗ ਨਹੀਂ।</string>
+    <string name="sk_call_manage">ਰਿਪੋਰਟ ਕੀਤੇ ਨੰਬਰ ਸੰਭਾਲੋ</string>
+    <string name="sk_call_reports_private">ਰਿਪੋਰਟਾਂ ਇਸ ਫ਼ੋਨ ਦੀਆਂ ਨਿੱਜੀ ਐਪ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਰਹਿੰਦੀਆਂ ਹਨ, ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਸਕੈਨ ਇਤਿਹਾਸ ਤੋਂ ਵੱਖ। ਇਹ ਤੁਹਾਡੀਆਂ ਰਿਪੋਰਟਾਂ ਹਨ, ਸੁਤੰਤਰ ਤੌਰ ਉੱਤੇ ਤਸਦੀਕ ਕੀਤੇ ਧੋਖਾਧੜੀ ਰਿਕਾਰਡ ਨਹੀਂ।</string>
+    <string name="sk_call_number_label">ਫ਼ੋਨ ਨੰਬਰ (ਦੇਸ਼ ਕੋਡ ਸਮੇਤ)</string>
+    <string name="sk_call_report_invalid_or_full">ਦੇਸ਼ ਕੋਡ ਸਮੇਤ ਠੀਕ ਫ਼ੋਨ ਨੰਬਰ ਪਾਓ। 200 ਰਿਪੋਰਟਾਂ ਹੋਣ ਉੱਤੇ ਪਹਿਲਾਂ ਇੱਕ ਹਟਾਓ।</string>
+    <string name="sk_call_add_report">ਸਥਾਨਕ ਰਿਪੋਰਟ ਜੋੜੋ</string>
+    <string name="sk_call_reports_empty">ਕੋਈ ਰਿਪੋਰਟ ਕੀਤਾ ਨੰਬਰ ਨਹੀਂ।</string>
+    <string name="sk_call_remove">ਹਟਾਓ</string>
+    <string name="sk_call_clear_reports">ਸਾਰੀਆਂ ਰਿਪੋਰਟਾਂ ਹਟਾਓ</string>
+    <string name="sk_call_clear_reports_detail">ਸਥਾਨਕ ਕਾਲਰ ਰਿਪੋਰਟਾਂ ਹਟਾਉਣੀਆਂ ਹਨ? ਸਕੈਨ ਇਤਿਹਾਸ, ਖਾਤਾ ਅਤੇ ਆਨਲਾਈਨ ਜਾਂਚ ਸੈਟਿੰਗਾਂ ਨਹੀਂ ਬਦਲਣਗੀਆਂ।</string>
+    <string name="sk_call_keep_reports">ਰਿਪੋਰਟਾਂ ਰੱਖੋ</string>
+    <string name="sk_call_close">ਬੰਦ ਕਰੋ</string>
+    <string name="sk_call_preview">ਕਾਲ ਸਾਵਧਾਨੀ ਦਾ ਝਲਕ-ਦ੍ਰਿਸ਼ (ਸਿਮੂਲੇਸ਼ਨ)</string>
+    <string name="sk_call_preview_title">ਸਿਮੂਲੇਸ਼ਨ — ਕਾਲ ਸਾਵਧਾਨੀ</string>
+    <string name="sk_call_preview_detail">ਇਹ ਸਿਰਫ਼ ਇੰਟਰਫੇਸ ਦਾ ਝਲਕ-ਦ੍ਰਿਸ਼ ਹੈ, ਅਸਲ ਕਾਲ ਜਾਂ ਪਛਾਣ ਦਾ ਨਤੀਜਾ ਨਹੀਂ। ਇਸ ਨਾਲ ਰਿਪੋਰਟ ਸੇਵ ਜਾਂ ਸਿਸਟਮ ਚੇਤਾਵਨੀ ਜਾਰੀ ਨਹੀਂ ਹੁੰਦੀ।</string>
+    <string name="sk_call_platform_limit">Android ਇੱਥੇ ਲੁਕੀ ਜਾਂ ਰੋਕੀ ਕਾਲਰ ਆਈਡੀ ਨਹੀਂ ਦਿੰਦਾ ਅਤੇ ਆਮ ਤੌਰ ਉੱਤੇ ਸੇਵ ਕੀਤੇ ਸੰਪਰਕਾਂ ਨੂੰ ਬਾਹਰ ਰੱਖਦਾ ਹੈ। ਇੰਟਰਨੈੱਟ ਐਪ ਦੀਆਂ ਕਾਲਾਂ ਇਸ ਸਹੂਲਤ ਵਿੱਚ ਸ਼ਾਮਲ ਨਾ ਵੀ ਹੋ ਸਕਦੀਆਂ ਹਨ।</string>
+</resources>

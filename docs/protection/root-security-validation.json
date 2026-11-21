@@ -1,0 +1,190 @@
+{
+  "generated_utc": "2026-11-21T13:46:33.061455+00:00",
+  "application": {
+    "name": "root-security",
+    "application_id": "com.asrcodes.dontmissmom",
+    "version_name": "3.1-mvp",
+    "version_code": 7,
+    "apk_sha256": "3c8bb601a4598b5052533c7cac4e627c792fc85bd1fded696bc0f59199c7a7b3"
+  },
+  "build": {
+    "debug_app": "passed",
+    "android_test_apk": "passed",
+    "apk_signature_v2": "verified",
+    "zipalign_16kb": "passed"
+  },
+  "jvm_tests": {
+    "protection-core": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "protection": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "lint": {
+    "app": {
+      "Error": 0,
+      "Fatal": 0,
+      "Warning": 112
+    },
+    "protection": {
+      "Error": 0,
+      "Fatal": 0,
+      "Warning": 29
+    }
+  },
+  "physical_phone": {
+    "model": "Samsung SM-M317F",
+    "android_api": 31,
+    "update_installed_without_clearing_data": true,
+    "local_regression_report": {
+      "report": "physical-phone-final-tests.txt",
+      "status": "failed_or_incomplete",
+      "passed_tests": [
+        "slashAndDeepPathVariantsDoNotCreateThreatsOnAndroid",
+        "legacyDemoToggleCannotTurnOrdinaryLinksIntoFakeThreats",
+        "exactReportedLinksStayQuietWithDeployedAssets",
+        "highRawUrlScoresRemainDiagnosticWhileStrongLocalCluesAreCautions"
+      ],
+      "failed_tests": [
+        "demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert"
+      ],
+      "completed_test_count": null
+    },
+    "ui_retest_report": {
+      "report": "physical-phone-ui-retest.txt",
+      "status": "failed_or_incomplete",
+      "passed_tests": [],
+      "failed_tests": [
+        "demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert"
+      ],
+      "completed_test_count": null
+    },
+    "local_tested_apk_sha256": "a33d4c228d38bbbdc2f925f1e59bb5bdf94692a27bafcfeaaae455a58bbee3dc",
+    "note": "Four local detection checks passed before the final API-error-message update. Initial UI scrolling failed; the revised bounded harness then stopped because the app was no longer foreground. No reset suite ran on this phone."
+  },
+  "emulator": {
+    "android_api": 36,
+    "online_response_tests": {
+      "report": "emulator-online-tests-retry.txt",
+      "status": "passed",
+      "passed_tests": [
+        "matchingOnlyAFourBytePrefixCannotFlagAnOrdinaryLink",
+        "fixtureCredentialIsEncryptedAndNeverShownInConfigurationState",
+        "bothReportedLinksReceiveNoMatchWithoutAnyGlobalDemoOverride",
+        "transportFailureIsNotCheckedAndNeverAnAlarm",
+        "malformedProviderReplyIsNotACleanReputationResult",
+        "explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory",
+        "exactProviderHashProducesAnAttributedHarmlessTestVerdict",
+        "manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi"
+      ],
+      "failed_tests": [],
+      "completed_test_count": 8
+    },
+    "host_integration_tests": {
+      "report": "emulator-host-integration-tests.txt",
+      "status": "failed_or_incomplete",
+      "passed_tests": [
+        "sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending",
+        "everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab",
+        "backgroundLocalCautionDoesNotCoverAnEmergencyPopup",
+        "combinedApplicationKeepsOneDontMissMomLauncher",
+        "protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable",
+        "localModelsLeaveOrdinaryLinksSilentAndScamLanguageAsACaution",
+        "clearingProtectionKeepsHostSessionEmergencySettingsAndHistory"
+      ],
+      "failed_tests": [
+        "demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert"
+      ],
+      "completed_test_count": null
+    },
+    "prefill_ui_retest": {
+      "report": "emulator-prefill-ui-retest.txt",
+      "status": "passed",
+      "passed_tests": [
+        "demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert"
+      ],
+      "failed_tests": [],
+      "completed_test_count": 1
+    },
+    "unique_tests_passed": 16,
+    "tested_apk_sha256": "a33d4c228d38bbbdc2f925f1e59bb5bdf94692a27bafcfeaaae455a58bbee3dc",
+    "subsequent_changes": "Final Google API error diagnostics added after these emulator checks; covered by eight additional JVM tests and the final physical-phone live attempt. Verdict policy and UI flows were unchanged.",
+    "host_run_note": "All seven host integration checks passed. The additional prefill assertion initially failed; the corrected test harness passed its targeted rerun. The production application was unchanged.",
+    "initial_attempt": "Instrumentation process stopped during emulator startup; system Bluetooth crashes and a background ANR were observed. Retried after emulator settled and Bluetooth was disabled."
+  },
+  "live_google_lookup": {
+    "verified": false,
+    "report": {
+      "report": "physical-phone-live-url-tests.txt",
+      "status": "failed_or_incomplete",
+      "passed_tests": [],
+      "failed_tests": [
+        "approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning"
+      ],
+      "completed_test_count": null
+    },
+    "cases": [
+      {
+        "case": "airtel",
+        "domain": "i.airtel.in",
+        "level": "SAFE",
+        "reasonCodes": [
+          "REPUTATION_NOT_CHECKED"
+        ],
+        "providerLastStatus": "Check the API setup or quota \u2014 not checked"
+      },
+      {
+        "case": "goodmonk",
+        "domain": "weurl.co",
+        "level": "SAFE",
+        "reasonCodes": [
+          "REPUTATION_NOT_CHECKED"
+        ],
+        "providerLastStatus": "Check the API setup or quota \u2014 not checked"
+      },
+      {
+        "case": "google-harmless-test",
+        "domain": "testsafebrowsing.appspot.com",
+        "level": "SAFE",
+        "reasonCodes": [
+          "REPUTATION_NOT_CHECKED"
+        ],
+        "providerLastStatus": "Check the API setup or quota \u2014 not checked"
+      }
+    ],
+    "interpretation": "SAFE plus REPUTATION_NOT_CHECKED is an internal non-alarming state displayed as Not checked. It is not a successful clean lookup.",
+    "previous_attempts": [
+      "physical-phone-live-url-tests-initial-timeouts.txt",
+      "physical-phone-live-url-tests-before-diagnostics.txt"
+    ],
+    "reason": "The user configured a key; the live attempt did not complete successfully. See sanitized case statuses; this does not establish that the key is invalid."
+  },
+  "live_incoming_phone_warning": {
+    "verified": false,
+    "reason": "Requires an actual supported notification, permissions, a working API key and an observed phone warning."
+  },
+  "privacy": {
+    "online_request": "Four-byte URL hash prefixes over fixed-origin HTTPS; key in x-goog-api-key header.",
+    "history": "Encrypted domain/verdict/reasons/timestamp metadata on the phone; no full message or URL path.",
+    "family_sos": "Separate existing cloud delivery; the whole application is not offline."
+  },
+  "limits": [
+    "Test counts are regression evidence, not detection accuracy.",
+    "Provider integration tests use synthetic responses and fixture credentials, not Google.",
+    "No redirect expansion; only first six extracted URLs checked per request; unsupported URLs remain Not checked.",
+    "No real guardian SMS was sent by these tests."
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "version": "3.2-final",
+  "version_code": 8,
+  "recorded_at_utc": "2026-11-21T21:31:32.204924+00:00",
+  "repository": "https://github.com/ASRcodes/root-security",
+  "repository_visibility": "public",
+  "source_reference": "v3.2-final",
+  "apk_relative_path": "app/build/outputs/apk/debug/app-debug.apk",
+  "apk_sha256": "100560a08fe6cc85b3fd6a8be48c10d75ae9f112517f3b3444c517f28e2ab66b",
+  "apk_bytes": 52684746,
+  "apk_package": "package: name='com.asrcodes.dontmissmom' versionCode='8' versionName='3.2-final' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+  "artifact_type": "debug-signed hackathon APK; not a Play Store release",
+  "signature_verified": true,
+  "zipalign_16kb_verified": true,
+  "jvm_tests": {
+    "protection-core": {
+      "tests": 105,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "passed": 104
+    },
+    "protection": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 17
+    },
+    "app": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 18
+    }
+  },
+  "lint_issue_counts": {
+    "app": {
+      "Warning": 109,
+      "Hint": 2
+    },
+    "protection": {
+      "Warning": 32
+    }
+  },
+  "android_distinct_checks_passed": 33,
+  "android_reports": [
+    "android-tests.txt",
+    "android-ui-retest.txt",
+    "android-final-two.txt"
+  ],
+  "android_cases": {
+    "com.asrcodes.dontmissmom.LocalProtectionEntryTest#signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount": {
+      "status_code": 0,
+      "report": "android-final-two.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#slashAndDeepPathVariantsDoNotCreateThreatsOnAndroid": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#legacyDemoToggleCannotTurnOrdinaryLinksIntoFakeThreats": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#exactReportedLinksStayQuietWithDeployedAssets": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#reservedExamplesExerciseLocalRulesWithoutProviderOrSimulationClaims": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#highRawUrlScoresRemainDiagnosticWhileStrongLocalCluesAreExplained": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest#demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert": {
+      "status_code": 0,
+      "report": "android-final-two.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#matchingOnlyAFourBytePrefixCannotFlagAnOrdinaryLink": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#fixtureCredentialIsEncryptedAndNeverShownInConfigurationState": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#bothReportedLinksReceiveNoMatchWithoutAnyGlobalDemoOverride": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#transportFailureIsNotCheckedAndNeverAnAlarm": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#malformedProviderReplyIsNotACleanReputationResult": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory": {
+      "status_code": 0,
+      "report": "android-ui-retest.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#exactProviderHashProducesAnAttributedHarmlessTestVerdict": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest#manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi": {
+      "status_code": 0,
+      "report": "android-ui-retest.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#backgroundLocalCautionDoesNotCoverAnEmergencyPopup": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#combinedApplicationKeepsOneDontMissMomLauncher": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#localModelsLeaveOrdinaryLinksSilentAndScamLanguageAsACaution": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ProtectionIntegrationTest#clearingProtectionKeepsHostSessionEmergencySettingsAndHistory": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ScamAlarmEndToEndTest#normalAndCautionInputsStayNonIntrusiveWhileReservedHighRiskShowsLabelledWarning": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.ScamAlarmEndToEndTest#selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning": {
+      "status_code": 0,
+      "report": "android-ui-retest.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#pauseInvalidatesAnEarlierNotificationReportEvenAfterReenable": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#resetKeepsCallShieldOffAfterReloadAndAdvancesTheActionEpoch": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#expiredNotificationActionCannotCreateALocalReport": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#reportsAreNormalizedRemovableAndBoundedWithoutClearingOtherSettings": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#unknownCallerWarnsAndReportEscalatesTheNextCall": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.CallShieldTest#pausedShieldAndNoRiskVerdictNeverPostWarnings": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.FinalSubmissionIntegrationTest#activeSosSuppressesCallWarningsWithRoleAndOverlayPermissionGranted": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.FinalSubmissionIntegrationTest#enabledGuardianWithGrantedPermissionNeverSendsForTestInput": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    },
+    "com.asrcodes.dontmissmom.FinalSubmissionIntegrationTest#reservedExamplesStayLocalEvenWhenOnlineCheckingIsConfigured": {
+      "status_code": 0,
+      "report": "android-tests.txt"
+    }
+  },
+  "android_execution_notes": "Initial API36 completed run: 29/33. Corrected test-only scrolling/text synchronization. Platform System UI ANR dialogs blocked API36 retries. API26 targeted retry passed provider warning, explicit preview and copy; final two checks verified local-entry editing and all six sample buttons using bounded outer-page scrolling, fresh editor lookup and real button accessibility actions. Earlier unsuccessful retry logs are retained. Production APK unchanged throughout test-only fixes.",
+  "emulator": "DMM_V2_API36 for initial integration/radio/SMS; DMM_V2_API26 for targeted UI retry",
+  "simulated_radio_call_passed": true,
+  "real_google_lookup": "Not verified in this run; online integration tests use fixture transport",
+  "physical_phone_and_carrier": "Not tested in this run; user requested emulator",
+  "emulator_sms": {
+    "event_type": "Android Emulator simulated SMS; no external SMS or live Google request",
+    "production_apk_application": true,
+    "normal_sms_injected": true,
+    "normal_full_warning_notification": false,
+    "normal_full_screen_warning": false,
+    "normal_resumed_activity": [
+      "topResumedActivity=ActivityRecord{135269389 u0 com.asrcodes.dontmissmom/org.suraksha.kavach.MainActivity t208}"
+    ],
+    "high_risk_sms_injected": true,
+    "high_risk_warning_notification": false,
+    "harmless_label_in_notification": false,
+    "labelled_full_screen_warning": true,
+    "resumed_activity": [
+      "topResumedActivity=ActivityRecord{67489461 u0 com.asrcodes.dontmissmom/org.suraksha.kavach.AlertActivity t208}"
+    ]
+  },
+  "cloud_deployment": "Not deployed or end-to-end verified in this run"
+}

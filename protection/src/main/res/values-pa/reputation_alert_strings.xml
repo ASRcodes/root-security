@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_google_test_badge">GOOGLE ਟੈਸਟ URL • ਨੁਕਸਾਨ ਰਹਿਤ ਟੈਸਟ</string>
+    <string name="sk_google_test_title">Google ਟੈਸਟ ਚੇਤਾਵਨੀ</string>
+    <string name="sk_google_test_detail">ਇਹ Google ਦਾ ਨੁਕਸਾਨ ਰਹਿਤ ਟੈਸਟ ਪੰਨਾ ਹੈ। ਚੇਤਾਵਨੀ ਅਸਲੀ ਆਨਲਾਈਨ ਸਾਖ ਦੀ ਜਾਂਚ ਤੋਂ ਮਿਲੀ ਹੈ। ਇਸ ਨਾਲ ਪਰਿਵਾਰਕ ਸੰਪਰਕ ਨੂੰ SMS ਨਹੀਂ ਭੇਜਿਆ ਜਾਂਦਾ।</string>
+    <string name="sk_simulation_title">ਚੇਤਾਵਨੀ ਦਾ ਟੈਸਟ ਪ੍ਰਦਰਸ਼ਨ</string>
+    <string name="sk_saved_result_badge">ਸਾਂਭਿਆ ਜਾਂਚ ਨਤੀਜਾ</string>
+    <string name="sk_history_not_checked">ਜਾਂਚ ਨਹੀਂ ਹੋਈ</string>
+    <string name="sk_history_threat_at_scan">ਜਾਂਚ ਵੇਲੇ ਖ਼ਤਰਾ ਦੱਸਿਆ ਗਿਆ</string>
+    <string name="sk_history_no_match">ਜਾਂਚ ਵੇਲੇ ਕੋਈ ਜਾਣਿਆ ਖ਼ਤਰਾ ਨਹੀਂ</string>
+    <string name="sk_history_expired_threat">ਦਰਜ ਸਮੇਂ Google ਨੇ ਸੰਭਾਵੀ ਖ਼ਤਰਾ ਦੱਸਿਆ ਸੀ। ਉਹ ਨਤੀਜਾ ਪੁਰਾਣਾ ਹੋ ਗਿਆ ਹੈ ਅਤੇ ਮੌਜੂਦਾ ਚੇਤਾਵਨੀ ਨਹੀਂ ਹੈ।</string>
+    <string name="sk_google_history_attribution">Advisory provided by Google. ਇਹ ਦਰਜ ਨਤੀਜਾ ਗਲਤ ਹੋ ਸਕਦਾ ਹੈ ਅਤੇ ਬਦਲ ਸਕਦਾ ਹੈ।</string>
+    <string name="sk_no_match_guarantee">ਪਹਿਲਾਂ ਖ਼ਤਰਾ ਨਾ ਮਿਲਣ ਨਾਲ ਹੁਣ ਲਿੰਕ ਦੇ ਸੁਰੱਖਿਅਤ ਹੋਣ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ ਮਿਲਦੀ।</string>
+    <string name="sk_reputation_expired_detail">ਇਸ ਨਤੀਜੇ ਉੱਤੇ ਭਰੋਸਾ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਨਵੀਂ ਆਨਲਾਈਨ ਜਾਂਚ ਕਰੋ। Google ਦੇ ਨਤੀਜੇ ਵੱਧ ਤੋਂ ਵੱਧ 30 ਮਿੰਟ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ। ਅਵੈਧ ਸਮਾਂ ਹੋਣ ਨਾਲ ਵੀ ਨਤੀਜਾ ਖ਼ਤਮ ਹੋ ਜਾਂਦਾ ਹੈ।</string>
+    <string name="sk_not_checked_advice">ਮੌਜੂਦਾ ਆਨਲਾਈਨ ਨਤੀਜਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਆਨਲਾਈਨ ਸੁਰੱਖਿਆ ਸੈਟਿੰਗਾਂ ਵੇਖੋ ਅਤੇ ਲਿੰਕ ਦੁਬਾਰਾ ਜਾਂਚੋ। ਸਰੋਤ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ ਤੱਕ ਪਾਸਵਰਡ, OTP ਜਾਂ ਭੁਗਤਾਨ ਜਾਣਕਾਰੀ ਨਾ ਦਿਓ।</string>
+</resources>

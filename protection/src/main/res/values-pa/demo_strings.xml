@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_demo_walkthrough_detail">ਉਦਾਹਰਨ ਚੁਣੋ, ਉਮੀਦ ਕੀਤਾ ਸਥਾਨਕ ਨਤੀਜਾ ਪੜ੍ਹੋ, ਫਿਰ ਇਹ ਸੁਨੇਹਾ ਜਾਂਚੋ ਦਬਾਓ। ਉਦਾਹਰਨ ਭਰਨ, ਕਾਪੀ ਕਰਨ ਜਾਂ ਸਾਂਝੀ ਕਰਨ ਨਾਲ ਜਾਂਚ ਨਹੀਂ ਚੱਲਦੀ। ਹਰ ਜਾਂਚ ਅਸਲੀ ਚੈਕਰ ਵਰਤਦੀ ਹੈ; ਵੱਖਰਾ ਚੇਤਾਵਨੀ ਪ੍ਰੀਵਿਊ ਸਿਰਫ਼ ਸਿਮੂਲੇਸ਼ਨ ਹੈ।</string>
+    <string name="sk_demo_normal_label">1 · ਆਮ Wikipedia ਲਿੰਕ ਭਰੋ</string>
+    <string name="sk_demo_caution_label">2 · ਨੁਕਸਾਨ ਰਹਿਤ ਸਾਵਧਾਨੀ ਉਦਾਹਰਨ ਭਰੋ</string>
+    <string name="sk_demo_danger_label">3 · ਨੁਕਸਾਨ ਰਹਿਤ ਉੱਚ-ਜੋਖਮ ਉਦਾਹਰਨ ਭਰੋ</string>
+    <string name="sk_demo_selected_input">ਚੁਣੀ ਹੋਈ ਉਦਾਹਰਨ</string>
+    <string name="sk_demo_normal_expected">ਉਮੀਦ ਕੀਤਾ ਸਥਾਨਕ ਨਤੀਜਾ: ਕੋਈ ਚੇਤਾਵਨੀ ਨਹੀਂ। ਆਨਲਾਈਨ ਜਾਂਚ ਪੂਰੀ ਨਾ ਹੋਵੇ ਤਾਂ ਨਤੀਜਾ ਜਾਂਚ ਨਹੀਂ ਹੋਈ ਰਹਿੰਦਾ ਹੈ। ਸਿਰਫ਼ ਪੂਰੀ ਜਾਂਚ ਹੀ ਕੋਈ ਜਾਣਿਆ ਖ਼ਤਰਾ ਨਹੀਂ ਮਿਲਿਆ ਕਹਿ ਸਕਦੀ ਹੈ; ਕੋਈ ਵੀ ਨਤੀਜਾ ਸੁਰੱਖਿਆ ਦੀ ਗਾਰੰਟੀ ਨਹੀਂ।</string>
+    <string name="sk_demo_caution_expected">ਉਮੀਦ ਕੀਤਾ ਸਥਾਨਕ ਨਤੀਜਾ: ਸਾਵਧਾਨੀ, ਬਿਨਾਂ ਪੂਰੀ ਸਕ੍ਰੀਨ ਦੇ ਅਲਾਰਮ ਦੇ। ਇਹ ਰਾਖਵਾਂ .example ਪਤਾ ਸਥਾਨਕ ਨਿਯਮਾਂ ਲਈ ਨੁਕਸਾਨ ਰਹਿਤ ਇਨਪੁਟ ਹੈ, ਪੁਸ਼ਟੀ ਕੀਤੀ ਖ਼ਤਰਨਾਕ ਵੈੱਬਸਾਈਟ ਨਹੀਂ।</string>
+    <string name="sk_demo_danger_expected">ਉਮੀਦ ਕੀਤਾ ਸਥਾਨਕ ਨਤੀਜਾ: ਸੁਨੇਹੇ ਅਤੇ ਲਿੰਕ ਦੇ ਮਿਲੇ ਸੰਕੇਤਾਂ ਤੋਂ ਉੱਚ-ਜੋਖਮ ਚੇਤਾਵਨੀ। ਰਾਖਵਾਂ .example ਲਿੰਕ ਨੁਕਸਾਨ ਰਹਿਤ ਹੈ; ਇਹ ਅਸਲੀ ਸਥਾਨਕ ਨਿਯਮ ਜਾਂਚਦਾ ਹੈ, Google ਵੱਲੋਂ ਪੁਸ਼ਟੀ ਕੀਤਾ ਖ਼ਤਰਾ ਨਹੀਂ।</string>
+    <string name="sk_demo_google_expected">Google ਸੇਵਾ ਟੈਸਟ: ਕੰਮ ਕਰਦੀ API ਕੁੰਜੀ ਅਤੇ Google ਤੋਂ ਅਸਲੀ ਖ਼ਤਰੇ ਦਾ ਮਿਲਾਨ ਲੋੜੀਂਦਾ ਹੈ। ਜਾਂਚ ਨਹੀਂ ਹੋਈ ਦਾ ਮਤਲਬ ਆਨਲਾਈਨ ਜਾਂਚ ਪੂਰੀ ਨਹੀਂ ਹੋਈ। ਇਹ ਅਧਿਕਾਰਤ ਟੈਸਟ ਸਥਾਨਕ ਨਿਯਮਾਂ ਦੀਆਂ ਉਦਾਹਰਨਾਂ ਤੋਂ ਵੱਖਰਾ ਹੈ।</string>
+    <string name="sk_demo_copy">ਉਦਾਹਰਨ ਕਾਪੀ ਕਰੋ</string>
+    <string name="sk_demo_share">ਉਦਾਹਰਨ ਸਾਂਝੀ ਕਰੋ</string>
+    <string name="sk_demo_share_title">ਉਦਾਹਰਨ ਸਾਂਝੀ ਕਰਨ ਲਈ ਐਪ ਚੁਣੋ</string>
+    <string name="sk_demo_share_unavailable">ਸਾਂਝਾ ਕਰਨ ਵਾਲੀ ਐਪ ਨਹੀਂ ਹੈ। ਉਦਾਹਰਨ ਕਾਪੀ ਕਰੋ ਵਰਤੋ।</string>
+    <string name="sk_demo_select_then_check">ਹੇਠਾਂ ਇਨਪੁਟ ਬਦਲ ਸਕਦੇ ਹੋ। ਤਿਆਰ ਹੋ ਕੇ ਇਹ ਸੁਨੇਹਾ ਜਾਂਚੋ ਦਬਾਓ। ਸਾਂਝਾ ਕਰਨ ਨਾਲ Android ਚੋਣ ਖੁੱਲ੍ਹਦੀ ਹੈ; ਪ੍ਰਾਪਤਕਰਤਾ ਚੁਣਨਾ ਅਤੇ ਭੇਜਣਾ ਤੁਹਾਡੇ ਹੱਥ ਵਿੱਚ ਹੈ।</string>
+    <string name="sk_demo_reserved_badge">ਨੁਕਸਾਨ ਰਹਿਤ ਉਦਾਹਰਨ · ਸਥਾਨਕ ਨਿਯਮ ਜਾਂਚ</string>
+    <string name="sk_demo_reserved_detail">ਇਹ .example ਪਤਾ ਉਦਾਹਰਨਾਂ ਲਈ ਰਾਖਵਾਂ ਹੈ। ਐਪ ਨੇ ਆਮ ਸਥਾਨਕ ਨਿਯਮਾਂ ਨਾਲ ਸੁਨੇਹੇ ਅਤੇ ਲਿੰਕ ਦੇ ਸੰਕੇਤ ਜਾਂਚੇ ਹਨ। ਇਹ Google ਵੱਲੋਂ ਪੁਸ਼ਟੀ ਕੀਤਾ ਖ਼ਤਰਾ ਨਹੀਂ। ਇਸ ਟੈਸਟ ਇਨਪੁਟ ਲਈ ਸਰਪ੍ਰਸਤ ਦੀਆਂ ਕਾਰਵਾਈਆਂ ਬੰਦ ਹਨ।</string>
+    <string name="sk_demo_danger_title">ਉੱਚ-ਜੋਖਮ ਸੰਕੇਤ · ਟੈਸਟ ਲਿੰਕ</string>
+    <string name="sk_demo_caution_title">ਸਾਵਧਾਨੀ ਸੰਕੇਤ · ਟੈਸਟ ਲਿੰਕ</string>
+    <string name="sk_demo_normal_title">ਨੁਕਸਾਨ ਰਹਿਤ ਉਦਾਹਰਨ · ਸਥਾਨਕ ਨਤੀਜਾ</string>
+    <string name="sk_demo_local_no_warning">ਸਥਾਨਕ ਜਾਂਚ ਵਿੱਚ ਚੇਤਾਵਨੀ ਦੇ ਸੰਕੇਤ ਨਹੀਂ ਮਿਲੇ। ਇਸ ਨਾਲ ਲਿੰਕ ਸੁਰੱਖਿਅਤ ਹੋਣ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਹੁੰਦੀ।</string>
+    <string name="sk_demo_notification_help">ਆਉਂਦੇ ਸੁਨੇਹੇ ਦਾ ਅਭਿਆਸ: ਸੂਚਨਾ ਪਹੁੰਚ ਅਤੇ ਆਪਣੇ ਆਪ ਸੁਰੱਖਿਆ ਚਾਲੂ ਕਰੋ। ਸਹਿਮਤ ਸਹਾਇਕ ਤੋਂ ਸਮਰਥਿਤ SMS ਜਾਂ WhatsApp ਸੂਚਨਾ ਵਿੱਚ ਉਦਾਹਰਨ ਇਸ ਫ਼ੋਨ ਉੱਤੇ ਭੇਜਵਾਓ। ਗੱਲਬਾਤ ਬੰਦ ਰੱਖੋ ਤਾਂ ਜੋ ਪ੍ਰੀਵਿਊ ਆਵੇ। ਲੁਕੇ ਸੁਨੇਹੇ ਨਹੀਂ ਜਾਂਚੇ ਜਾ ਸਕਦੇ। ਪੂਰੀ ਸਕ੍ਰੀਨ ਦੀ ਚੇਤਾਵਨੀ ਲਈ Android ਓਵਰਲੇ ਇਜਾਜ਼ਤ ਅਤੇ ਐਪ ਦਾ ਚੇਤਾਵਨੀ ਸਵਿੱਚ ਲੋੜੀਂਦੇ ਹੋ ਸਕਦੇ ਹਨ।</string>
+    <string name="sk_demo_call_help">Call Shield ਵੱਖਰਾ ਹੈ: ਸਮਰਥਿਤ Android 10+ ਫ਼ੋਨ ਦੀ ਸੁਰੱਖਿਆ ਸੈਟਿੰਗ ਵਿੱਚ ਕਾਲ-ਸਕ੍ਰੀਨਿੰਗ ਭੂਮਿਕਾ ਚਾਲੂ ਕਰੋ। ਸਹਿਮਤ ਵਿਅਕਤੀ ਦੀ ਕਾਲ ਨਾਲ ਟੈਸਟ ਕਰੋ। ਇਹ ਸਿਰਫ਼ ਕਾਲਰ-ID ਬਾਰੇ ਸਲਾਹ ਦਿੰਦਾ ਹੈ; ਕਾਲ ਸੁਣਦਾ ਜਾਂ ਨਕਲ ਕੀਤੀ ਆਵਾਜ਼ ਨਹੀਂ ਪਛਾਣਦਾ।</string>
+</resources>

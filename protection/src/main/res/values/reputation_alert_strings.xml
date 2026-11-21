@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_google_test_badge">GOOGLE TEST URL • HARMLESS TEST</string>
+    <string name="sk_google_test_title">Google test warning</string>
+    <string name="sk_google_test_detail">This is a harmless Google test page. Its warning comes from the real reputation lookup. It does not send guardian SMS.</string>
+    <string name="sk_simulation_title">Simulated test alert</string>
+    <string name="sk_saved_result_badge">SAVED CHECK RESULT</string>
+    <string name="sk_history_not_checked">Not checked</string>
+    <string name="sk_history_threat_at_scan">Threat reported at scan time</string>
+    <string name="sk_history_no_match">No known threat at scan time</string>
+    <string name="sk_history_expired_threat">Google reported a possible threat at the recorded time. That finding has expired and is not a current warning.</string>
+    <string name="sk_google_history_attribution">Advisory provided by Google. This recorded finding may be incorrect and can change.</string>
+    <string name="sk_no_match_guarantee">A past no-match result does not guarantee that the link is safe now.</string>
+    <string name="sk_reputation_expired_detail">Run a new online check before relying on this result. Google findings are used for at most 30 minutes. An invalid timestamp also expires the finding.</string>
+    <string name="sk_not_checked_advice">No current online verdict is available. Check the online protection settings and scan the link again. Avoid entering passwords, OTPs or payment details until you verify the source.</string>
+</resources>

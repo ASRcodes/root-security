@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_local_protection">Open protection without sign-in</string>
+    <string name="local_protection_sign_in_note">Local checks and Call Shield are available without an account. Family SOS needs sign-in. Call Shield and automatic checks still need the relevant Android permissions.</string>
+</resources>

@@ -1,0 +1,116 @@
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.LocalProtectionEntryTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.LocalProtectionEntryTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(com.asrcodes.dontmissmom.LocalProtectionEntryTest):
+androidx.test.uiautomator.StaleObjectException
+	at androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:1018)
+	at androidx.test.uiautomator.UiObject2.setText(UiObject2.java:960)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:52)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.LocalProtectionEntryTest
+INSTRUMENTATION_STATUS: stack=androidx.test.uiautomator.StaleObjectException
+	at androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:1018)
+	at androidx.test.uiautomator.UiObject2.setText(UiObject2.java:960)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:52)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest):
+java.lang.AssertionError: App control was not reachable within the page's scroll bounds: text '1 · Load normal Wikipedia link'
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findInApp(RootSecurityUiHarness.kt:47)
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:21)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:120)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: App control was not reachable within the page's scroll bounds: text '1 · Load normal Wikipedia link'
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findInApp(RootSecurityUiHarness.kt:47)
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:21)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:120)
+
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.ScamAlarmEndToEndTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ScamAlarmEndToEndTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ScamAlarmEndToEndTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 31.284
+There were 2 failures:
+1) signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(com.asrcodes.dontmissmom.LocalProtectionEntryTest)
+androidx.test.uiautomator.StaleObjectException
+	at androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:1018)
+	at androidx.test.uiautomator.UiObject2.setText(UiObject2.java:960)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:52)
+2) demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest)
+java.lang.AssertionError: App control was not reachable within the page's scroll bounds: text '1 · Load normal Wikipedia link'
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findInApp(RootSecurityUiHarness.kt:47)
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:21)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:120)
+
+FAILURES!!!
+Tests run: 5,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

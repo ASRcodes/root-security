@@ -1,0 +1,17 @@
+{
+  "event_type": "Android Emulator simulated SMS; no external SMS or live Google request",
+  "production_apk_application": true,
+  "normal_sms_injected": true,
+  "normal_full_warning_notification": false,
+  "normal_full_screen_warning": false,
+  "normal_resumed_activity": [
+    "topResumedActivity=ActivityRecord{135269389 u0 com.asrcodes.dontmissmom/org.suraksha.kavach.MainActivity t208}"
+  ],
+  "high_risk_sms_injected": true,
+  "high_risk_warning_notification": false,
+  "harmless_label_in_notification": false,
+  "labelled_full_screen_warning": true,
+  "resumed_activity": [
+    "topResumedActivity=ActivityRecord{67489461 u0 com.asrcodes.dontmissmom/org.suraksha.kavach.AlertActivity t208}"
+  ]
+}

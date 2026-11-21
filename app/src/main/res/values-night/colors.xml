@@ -1,0 +1,27 @@
+<resources>
+    <color name="primary">#FF5A52</color>
+    <color name="danger">#FF5A52</color>
+    <color name="primary_soft">#3A1515</color>
+    <color name="on_primary">#101828</color>
+    <color name="background">#0B1220</color>
+    <color name="surface">#111827</color>
+    <color name="surface_elevated">#1F2937</color>
+    <color name="surface_variant">#1F2937</color>
+    <color name="ink">#F8FAFC</color>
+    <color name="muted">#CBD5E1</color>
+    <color name="outline">#334155</color>
+    <color name="control_outline">#64748B</color>
+    <color name="button_surface">#1F2937</color>
+    <color name="on_button">#F8FAFC</color>
+    <color name="info">#60A5FA</color>
+    <color name="info_soft">#172A46</color>
+    <color name="on_info">#101828</color>
+    <color name="success">#34D399</color>
+    <color name="success_ink">#34D399</color>
+    <color name="success_soft">#102F29</color>
+    <color name="warning">#FBBF24</color>
+    <color name="warning_ink">#FBBF24</color>
+    <color name="warning_soft">#332811</color>
+    <color name="hero">#111827</color>
+    <color name="hero_end">#1F2937</color>
+</resources>

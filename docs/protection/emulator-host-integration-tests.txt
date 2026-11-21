@@ -1,0 +1,137 @@
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.ProtectionIntegrationTest:
+INSTRUMENTATION_STATUS: test=sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sharingTextOpensAnEditableScanWithoutAutomaticallyScanningOrSending
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=everyProtectionEntryOpensItsScreenAndReturnsToTheHostTab
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=backgroundLocalCautionDoesNotCoverAnEmergencyPopup
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=backgroundLocalCautionDoesNotCoverAnEmergencyPopup
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=combinedApplicationKeepsOneDontMissMomLauncher
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=combinedApplicationKeepsOneDontMissMomLauncher
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=protectionTabSurvivesRotationAndEmergencyNavigationRemainsAvailable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=localModelsLeaveOrdinaryLinksSilentAndScamLanguageAsACaution
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=localModelsLeaveOrdinaryLinksSilentAndScamLanguageAsACaution
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=clearingProtectionKeepsHostSessionEmergencySettingsAndHistory
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ProtectionIntegrationTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=clearingProtectionKeepsHostSessionEmergencySettingsAndHistory
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest:
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: App control was not reachable after 18 bounded page swipes: i.airtel.in/rc349sil3
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:31)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:101)
+
+INSTRUMENTATION_STATUS: stream=
+Error in demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest):
+java.lang.AssertionError: App control was not reachable after 18 bounded page swipes: i.airtel.in/rc349sil3
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:31)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:101)
+
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 136.275
+There was 1 failure:
+1) demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest)
+java.lang.AssertionError: App control was not reachable after 18 bounded page swipes: i.airtel.in/rc349sil3
+	at com.asrcodes.dontmissmom.RootSecurityUiHarness.findText(RootSecurityUiHarness.kt:31)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:101)
+
+FAILURES!!!
+Tests run: 8,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,30 @@
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityCallRadioTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityCallRadioTest:
+INSTRUMENTATION_STATUS: test=simulatedRadioCallReachesAndroidScreeningAndShowsTheLocalReport
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stream=ROOT_SECURITY_RADIO_READY +12025550142 — emulator simulation only
+HOST_SIMULATED_CALL_INJECTED=True
+
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stream=ROOT_SECURITY_RADIO_OBSERVED local reported-number warning from Android callback
+
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityCallRadioTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=simulatedRadioCallReachesAndroidScreeningAndShowsTheLocalReport
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 1.481
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1

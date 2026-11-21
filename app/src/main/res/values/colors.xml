@@ -1,0 +1,35 @@
+<resources>
+    <!-- Brand and emergency colors are opt-in; everyday controls use navy/blue. -->
+    <color name="primary">#B42318</color>
+    <color name="danger">#D92D20</color>
+    <color name="primary_soft">#FEF3F2</color>
+    <color name="danger_soft">@color/primary_soft</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_elevated">#FFFFFF</color>
+    <color name="surface_variant">#F2F4F7</color>
+    <color name="ink">#101828</color>
+    <color name="muted">#475467</color>
+    <color name="outline">#E4E7EC</color>
+    <color name="control_outline">#667085</color>
+    <color name="foundation">#101828</color>
+    <color name="button_surface">#101828</color>
+    <color name="on_button">#FFFFFF</color>
+    <color name="info">#2563EB</color>
+    <color name="info_soft">#EFF6FF</color>
+    <color name="on_info">#FFFFFF</color>
+    <color name="success">#12B76A</color>
+    <color name="success_ink">#067647</color>
+    <color name="success_soft">#ECFDF3</color>
+    <color name="warning">#F79009</color>
+    <color name="warning_ink">#B54708</color>
+    <color name="warning_soft">#FFFAEB</color>
+    <color name="hero">#101828</color>
+    <color name="hero_end">#1D2939</color>
+    <color name="hero_secondary">#CBD5E1</color>
+    <color name="emergency_on_hero">#FFB4AB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">@color/info</color>
+</resources>

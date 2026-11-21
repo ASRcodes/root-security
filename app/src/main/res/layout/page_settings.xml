@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/settingsPage" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings" android:textAppearance="@style/Text.DMM.Title"/>
+        <Space android:layout_width="1dp" android:layout_height="6dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_body" android:textAppearance="@style/Text.DMM.Body"/>
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchSiren" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/siren_mode" android:textAppearance="@style/Text.DMM.Section"/>
+                <TextView android:id="@+id/tvSirenStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/siren_on" android:textAppearance="@style/Text.DMM.Body"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="16dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/setup_title" android:textAppearance="@style/Text.DMM.Section"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnNotificationSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notifications" app:icon="@drawable/ic_bell" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <TextView android:id="@+id/tvNotificationStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notifications_body" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnDndSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dnd" app:icon="@drawable/ic_shield" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <TextView android:id="@+id/tvDndStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dnd_body" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnFullScreenSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/full_screen" app:icon="@drawable/ic_phone" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <TextView android:id="@+id/tvFullScreenStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/full_screen_body" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnLocationSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/location_title" app:icon="@drawable/ic_location" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAppPermissions" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/app_permissions" app:icon="@drawable/ic_settings" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="16dp"/>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/account" android:textAppearance="@style/Text.DMM.Label"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <TextView android:id="@+id/tvProfileName" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/loading" android:textAppearance="@style/Text.DMM.Section"/>
+                <Space android:layout_width="1dp" android:layout_height="4dp"/>
+                <TextView android:id="@+id/tvProfileEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/loading" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="4dp"/>
+                <TextView android:id="@+id/tvPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/loading" android:textAppearance="@style/Text.DMM.Body"/>
+                <Space android:layout_width="1dp" android:layout_height="12dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnEditPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/edit_phone" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sign_out" style="@style/Widget.Material3.Button.TextButton" android:textColor="@color/muted"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <Space android:layout_width="1dp" android:layout_height="20dp"/>
+        <TextView android:id="@+id/tvVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/app_name" android:textAppearance="@style/Text.DMM.Body" android:gravity="center" android:textSize="12sp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

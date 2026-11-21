@@ -1,0 +1,9 @@
+<resources>
+    <style name="sk_Theme_Kavach" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#101828</item>
+        <item name="android:navigationBarColor">#F8FAFC</item>
+    </style>
+</resources>

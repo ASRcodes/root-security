@@ -1,0 +1,50 @@
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest:
+INSTRUMENTATION_STATUS: test=approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: stream=ROOT_SECURITY_LIVE {"case":"airtel","domain":"i.airtel.in","level":"SAFE","reasonCodes":["REPUTATION_NOT_CHECKED"],"providerLastStatus":"Check the API setup or quota — not checked"}
+
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stream=ROOT_SECURITY_LIVE {"case":"goodmonk","domain":"weurl.co","level":"SAFE","reasonCodes":["REPUTATION_NOT_CHECKED"],"providerLastStatus":"Check the API setup or quota — not checked"}
+
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: stream=ROOT_SECURITY_LIVE {"case":"google-harmless-test","domain":"testsafebrowsing.appspot.com","level":"SAFE","reasonCodes":["REPUTATION_NOT_CHECKED"],"providerLastStatus":"Check the API setup or quota — not checked"}
+
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: airtel needs a completed live no-match response
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest.approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning(RootSecurityLiveUrlCheckTest.kt:77)
+
+INSTRUMENTATION_STATUS: stream=
+Error in approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning(com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest):
+java.lang.AssertionError: airtel needs a completed live no-match response
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest.approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning(RootSecurityLiveUrlCheckTest.kt:77)
+
+INSTRUMENTATION_STATUS: test=approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 9.225
+There was 1 failure:
+1) approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning(com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest)
+java.lang.AssertionError: airtel needs a completed live no-match response
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.RootSecurityLiveUrlCheckTest.approvedLinksUseTheSavedLiveProviderAndShowTheGoogleTestWarning(RootSecurityLiveUrlCheckTest.kt:77)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

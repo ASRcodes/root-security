@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_call_channel">कॉलर सावधानियाँ</string>
+    <string name="sk_call_title_high">आपके द्वारा रिपोर्ट किया नंबर</string>
+    <string name="sk_call_title_caution">कॉलर की पहचान जाँचें</string>
+    <string name="sk_call_reason_hidden">कॉलर की पहचान छिपी है या उपलब्ध नहीं है। केवल इससे धोखाधड़ी साबित नहीं होती।</string>
+    <string name="sk_call_reason_reported">आपने इस फ़ोन पर इस नंबर को रिपोर्ट किया था। कॉलर आईडी नकली हो सकती है।</string>
+    <string name="sk_call_reason_international">इस कॉलर आईडी में अंतरराष्ट्रीय कोड है। केवल इससे धोखाधड़ी साबित नहीं होती।</string>
+    <string name="sk_call_reason_unknown">अनजान कॉलर का मतलब हमेशा धोखाधड़ी नहीं होता।</string>
+    <string name="sk_call_reason_telemarketing">यह नंबर 140 प्रचार कॉल श्रृंखला का है।</string>
+    <string name="sk_call_voice_clone_advice">कॉलर को OTP या पासवर्ड न दें। तुरंत पैसे माँगे जाएँ तो कॉल काटकर अपने सेव किए नंबर पर वापस कॉल करें।</string>
+    <string name="sk_call_mark_scam">इस नंबर को रिपोर्ट करें</string>
+    <string name="sk_call_banner_dismiss">बंद करने के लिए टैप करें</string>
+    <string name="sk_call_shield_title">कॉल शील्ड</string>
+    <string name="sk_call_shield_detail">समर्थित कॉल उठाने से पहले वैकल्पिक कॉलर आईडी सलाह। अनजान और अंतरराष्ट्रीय नंबरों पर सावधानी दिखाई जाती है। तेज चेतावनी केवल आपकी अपनी रिपोर्ट पर मिलती है। कॉल सामान्य रूप से बजती है।</string>
+    <string name="sk_call_shield_unavailable">कॉल स्क्रीनिंग के लिए Android 10 या नया संस्करण और समर्थित डिवाइस चाहिए।</string>
+    <string name="sk_call_shield_enable">Android कॉल स्क्रीनिंग चालू करें</string>
+    <string name="sk_call_shield_switch">कॉलर सावधानियाँ</string>
+    <string name="sk_call_shield_on">चालू। Android आम तौर पर सेव किए संपर्कों को स्क्रीनिंग से बाहर रखता है।</string>
+    <string name="sk_call_shield_paused">रुका हुआ। कॉल चेतावनियाँ बंद हैं।</string>
+    <string name="sk_call_reported_count">%1$d / 200 स्थानीय रिपोर्ट</string>
+    <string name="sk_call_voice_limit">केवल कॉलर आईडी नियम: कॉल ऑडियो विश्लेषण, नकली आवाज़ पहचान, स्वचालित ब्लॉकिंग या रिकॉर्डिंग नहीं।</string>
+    <string name="sk_call_manage">रिपोर्ट किए नंबर सँभालें</string>
+    <string name="sk_call_reports_private">रिपोर्ट इस फ़ोन की निजी ऐप सेटिंग में रहती हैं और एन्क्रिप्टेड स्कैन इतिहास से अलग हैं। ये आपकी रिपोर्ट हैं, स्वतंत्र रूप से सत्यापित धोखाधड़ी रिकॉर्ड नहीं।</string>
+    <string name="sk_call_number_label">फ़ोन नंबर (देश कोड सहित)</string>
+    <string name="sk_call_report_invalid_or_full">देश कोड सहित सही फ़ोन नंबर डालें। 200 रिपोर्ट होने पर पहले एक हटाएँ।</string>
+    <string name="sk_call_add_report">स्थानीय रिपोर्ट जोड़ें</string>
+    <string name="sk_call_reports_empty">कोई रिपोर्ट किया नंबर नहीं।</string>
+    <string name="sk_call_remove">हटाएँ</string>
+    <string name="sk_call_clear_reports">सभी रिपोर्ट हटाएँ</string>
+    <string name="sk_call_clear_reports_detail">स्थानीय कॉलर रिपोर्ट हटाएँ? स्कैन इतिहास, खाता और ऑनलाइन जाँच सेटिंग वैसे ही रहेंगे।</string>
+    <string name="sk_call_keep_reports">रिपोर्ट रखें</string>
+    <string name="sk_call_close">बंद करें</string>
+    <string name="sk_call_preview">कॉल सावधानी का पूर्वावलोकन (सिमुलेशन)</string>
+    <string name="sk_call_preview_title">सिमुलेशन — कॉल सावधानी</string>
+    <string name="sk_call_preview_detail">यह केवल इंटरफ़ेस का पूर्वावलोकन है, वास्तविक कॉल या पहचान परिणाम नहीं। इससे कोई रिपोर्ट सेव या सिस्टम चेतावनी जारी नहीं होती।</string>
+    <string name="sk_call_platform_limit">Android यहाँ छिपी या प्रतिबंधित कॉलर आईडी नहीं देता और आम तौर पर सेव किए संपर्कों को बाहर रखता है। इंटरनेट ऐप की कॉल इस सुविधा में शामिल नहीं भी हो सकती हैं।</string>
+</resources>

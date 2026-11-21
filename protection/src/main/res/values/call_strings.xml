@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sk_call_channel">Caller cautions</string>
+    <string name="sk_call_title_high">Number you reported</string>
+    <string name="sk_call_title_caution">Check this caller</string>
+    <string name="sk_call_reason_hidden">Caller ID is hidden or unavailable. This alone does not establish fraud.</string>
+    <string name="sk_call_reason_reported">You reported this number on this phone. Caller ID can be spoofed.</string>
+    <string name="sk_call_reason_international">This caller ID has an international prefix. This alone does not establish fraud.</string>
+    <string name="sk_call_reason_unknown">An unfamiliar caller is not necessarily a scam.</string>
+    <string name="sk_call_reason_telemarketing">This number uses the 140 promotional-call series.</string>
+    <string name="sk_call_voice_clone_advice">Never share an OTP or password with a caller. For urgent money requests, hang up and call a saved number.</string>
+    <string name="sk_call_mark_scam">Report this number</string>
+    <string name="sk_call_banner_dismiss">TAP TO CLOSE</string>
+    <string name="sk_call_shield_title">Call Shield</string>
+    <string name="sk_call_shield_detail">Optional caller-ID advice before you answer an eligible call. Unfamiliar and international numbers receive a caution. Stronger warnings require your own local report. Calls still ring normally.</string>
+    <string name="sk_call_shield_unavailable">Call screening requires Android 10 or newer and a supported device.</string>
+    <string name="sk_call_shield_enable">Enable Android call screening</string>
+    <string name="sk_call_shield_switch">Caller cautions</string>
+    <string name="sk_call_shield_on">On. Android normally excludes saved contacts from screening.</string>
+    <string name="sk_call_shield_paused">Paused. Call warnings are disabled.</string>
+    <string name="sk_call_reported_count">%1$d / 200 local reports</string>
+    <string name="sk_call_voice_limit">Caller-ID rules only: no call audio analysis, voice-clone detection, automatic blocking or recording.</string>
+    <string name="sk_call_manage">Manage reported numbers</string>
+    <string name="sk_call_reports_private">Reports stay in private app settings on this phone, separately from encrypted scan history. These are your reports, not independently verified scam records.</string>
+    <string name="sk_call_number_label">Phone number (include country code)</string>
+    <string name="sk_call_report_invalid_or_full">Enter a valid phone number, including its country code. If you have 200 reports, remove one first.</string>
+    <string name="sk_call_add_report">Add local report</string>
+    <string name="sk_call_reports_empty">No reported numbers.</string>
+    <string name="sk_call_remove">Remove</string>
+    <string name="sk_call_clear_reports">Clear all reports</string>
+    <string name="sk_call_clear_reports_detail">Remove your local caller reports? This leaves scan history, your account and online-check settings unchanged.</string>
+    <string name="sk_call_keep_reports">Keep reports</string>
+    <string name="sk_call_close">Close</string>
+    <string name="sk_call_preview">Preview a call caution (simulation)</string>
+    <string name="sk_call_preview_title">Simulation — call caution</string>
+    <string name="sk_call_preview_detail">This is a local interface preview, not an incoming call or a detection result. It does not save a report or post a system warning.</string>
+    <string name="sk_call_platform_limit">Android does not provide hidden or restricted caller IDs here, and normally excludes saved contacts. Internet-app calls may not be covered.</string>
+</resources>

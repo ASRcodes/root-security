@@ -1,0 +1,50 @@
+{
+  "raw_phiusiil_distribution": {
+    "legitimate": {
+      "total": 134850,
+      "empty_path": 134850,
+      "slash_only_path": 0,
+      "longer_path": 0,
+      "has_query": 0,
+      "https": 134850
+    },
+    "phishing": {
+      "total": 100945,
+      "empty_path": 40518,
+      "slash_only_path": 32971,
+      "longer_path": 27456,
+      "has_query": 6079,
+      "https": 49196
+    }
+  },
+  "training_code_tranco": "40,000 benign proxy URLs constructed as https:// + domain without trailing slash",
+  "url_model_root_split_features": {
+    "is_https": 42,
+    "host_length": 2,
+    "host_entropy": 3,
+    "digit_ratio": 1
+  },
+  "url_model_split_counts": {
+    "is_https": 56,
+    "host_length": 2266,
+    "subdomain_depth": 882,
+    "host_entropy": 2026,
+    "is_shortener": 34,
+    "path_depth": 941,
+    "path_length": 1643,
+    "risky_tld": 293,
+    "lookalike": 51,
+    "url_length": 1782,
+    "host_hyphens": 1061,
+    "digit_ratio": 1387,
+    "host_dots": 1157,
+    "credential_path": 92,
+    "query_length": 70,
+    "has_punycode": 78,
+    "url_digits": 774,
+    "query_pairs": 116,
+    "url_at": 54,
+    "brand_subdomain": 24,
+    "url_percent": 3
+  }
+}

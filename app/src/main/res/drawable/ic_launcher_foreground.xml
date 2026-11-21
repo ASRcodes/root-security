@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root Security mark: a shield guarding a root network (key node with branching roots).
+     Content stays inside the 66dp adaptive-icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield -->
+    <path android:pathData="M54,25 L77,33.5 L77,52 C77,66.5 67.2,77.6 54,83 C40.8,77.6 31,66.5 31,52 L31,33.5 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="54" android:startY="25" android:endX="54" android:endY="83">
+                <item android:offset="0" android:color="#FFF2FFFA" />
+                <item android:offset="1" android:color="#FF8FF0CF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Root trunk and branches -->
+    <path android:fillColor="#00000000" android:strokeColor="#FF0A1A33" android:strokeWidth="3.2"
+        android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M54,48 L54,72 M54,58 L45,64 L45,70 M54,58 L63,64 L63,70" />
+    <!-- Key node -->
+    <path android:fillColor="#FF0A1A33" android:pathData="M54,36 m-7,0 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0" />
+    <path android:fillColor="#FF2FD3A0" android:pathData="M54,36 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+    <!-- Root tips -->
+    <path android:fillColor="#FF0A1A33" android:pathData="M45,71 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+    <path android:fillColor="#FF0A1A33" android:pathData="M63,71 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+    <path android:fillColor="#FF0A1A33" android:pathData="M54,73.5 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+</vector>

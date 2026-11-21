@@ -1,0 +1,203 @@
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.LocalProtectionEntryTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.LocalProtectionEntryTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(com.asrcodes.dontmissmom.LocalProtectionEntryTest):
+java.lang.AssertionError: Local protection home must open without Google sign-in
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:46)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.LocalProtectionEntryTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Local protection home must open without Google sign-in
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:46)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:109)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:109)
+
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory(com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory(RootSecurityOnlineIntegrationTest.kt:174)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory(RootSecurityOnlineIntegrationTest.kt:174)
+
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi(com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi(RootSecurityOnlineIntegrationTest.kt:160)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi(RootSecurityOnlineIntegrationTest.kt:160)
+
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+com.asrcodes.dontmissmom.ScamAlarmEndToEndTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ScamAlarmEndToEndTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=5
+INSTRUMENTATION_STATUS: stream=
+Error in selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning(com.asrcodes.dontmissmom.ScamAlarmEndToEndTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest$selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning$1.invokeSuspend(ScamAlarmEndToEndTest.kt:126)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest.selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning(ScamAlarmEndToEndTest.kt:121)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning
+INSTRUMENTATION_STATUS: class=com.asrcodes.dontmissmom.ScamAlarmEndToEndTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest$selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning$1.invokeSuspend(ScamAlarmEndToEndTest.kt:126)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest.selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning(ScamAlarmEndToEndTest.kt:121)
+
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 97.514
+There were 5 failures:
+1) signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(com.asrcodes.dontmissmom.LocalProtectionEntryTest)
+java.lang.AssertionError: Local protection home must open without Google sign-in
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.asrcodes.dontmissmom.LocalProtectionEntryTest.signedOutUserCanOpenAndEditLocalProtectionWithoutCreatingAnAccount(LocalProtectionEntryTest.kt:46)
+2) demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityLinkRegressionTest.demoSamplesOnlyFillTheEditorWithoutScanningOrOpeningAnAlert(RootSecurityLinkRegressionTest.kt:109)
+3) explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory(com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.explicitAlertPreviewIsLabeledAndDoesNotCheckLinksOrWriteHistory(RootSecurityOnlineIntegrationTest.kt:174)
+4) manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi(com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.RootSecurityOnlineIntegrationTest.manualGoogleFixtureOpensAnHonestlyLabeledWarningThroughTheRealUi(RootSecurityOnlineIntegrationTest.kt:160)
+5) selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning(com.asrcodes.dontmissmom.ScamAlarmEndToEndTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest$selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning$1.invokeSuspend(ScamAlarmEndToEndTest.kt:126)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at com.asrcodes.dontmissmom.ScamAlarmEndToEndTest.selectingAndCopyingAnExampleShowsItsExpectedBehaviorWithoutScanning(ScamAlarmEndToEndTest.kt:121)
+
+FAILURES!!!
+Tests run: 5,  Failures: 5
+
+
+INSTRUMENTATION_CODE: -1
