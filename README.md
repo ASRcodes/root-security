@@ -2,87 +2,146 @@
 
 **Your all-in-one family safety companion.**
 
-root-security combines family SOS, message/link checks, caller-ID cautions and practical next steps in one Android app. The current submission target is **3.2-final** (version code 8). Its application ID remains `com.asrcodes.dontmissmom` so a correctly signed update can preserve an existing installation.
+root-security is a native Android application that brings family emergency alerts, message and link protection, caller-ID cautions, and local security history into one place. It helps users recognize risk signals, understand a warning, and reach trusted family members when they need support.
 
-Development continues in the public [ASRcodes/root-security repository](https://github.com/ASRcodes/root-security). The earlier DontMissMOM checkout is historical; make future changes in root-security. Get the debug-signed hackathon APK from [release v3.2-final](https://github.com/ASRcodes/root-security/releases/tag/v3.2-final). Use [Final submission](docs/FINAL_SUBMISSION.md) for the exact verification record and [Demo script](docs/DEMO_SCRIPT.md) for the judge rehearsal. The recorded checks include 139 passing JVM tests (one optional test skipped), 33 distinct Android checks across API 36 and API 26 runs, an Android call-screening callback from a simulated call, and the production notification-listener path from simulated SMS. Live Google reputation, physical-carrier behavior and cloud SOS delivery are separate, unverified checks for this artifact.
+**Final submission: 3.2-final · Version code 8**
 
-On the sign-in screen, choose **Open protection without sign-in** to enter the local protection home. Message/file checks, the demo lab and Call Shield do not require a family account. Family SOS still requires sign-in, and automatic checks/Call Shield still require the relevant Android permissions. If already signed in, use the **Protection** tab.
+[Download the APK](https://github.com/ASRcodes/root-security/releases/download/v3.2-final/root-security-3.2-final.apk) · [Release notes](https://github.com/ASRcodes/root-security/releases/tag/v3.2-final) · [Verification record](docs/validation/final-evidence.json)
 
-## What the application contains
+The published APK is debug-signed for evaluation. Android 8.0 / API 26 or later is required; Call Shield requires a supported Android 10 / API 29+ call-screening role.
 
-- **Family SOS:** approved contacts, emergency notifications, optional location and a short voice message, callback, playback and emergency history.
-- **Message/link protection:** manual checks, Android share input and supported notification previews. Explainable local rules and a local text model produce cautious or unconfirmed high-risk findings; optional Google Safe Browsing supplies known-threat reputation.
-- **Call Shield:** optional Android call-screening role, caller-ID cautions and a manageable list of numbers the user reported locally. Calls continue ringing normally. It does not analyze call audio, detect cloned voices, record or automatically block calls.
-- **Family support:** understandable reasons, English/Hindi/Punjabi UI and warning audio, a family code-word aid and separate opt-in guardian support.
-- **File/APK inspection:** limited file and APK risk checks. This is not a full antivirus or automatic malware-removal product.
-- **Honest demonstrations:** harmless reserved `.example` inputs go through the real local rules. They are labelled as test inputs and cannot trigger guardian actions. A separate alert preview is explicitly a simulation.
+## Features
 
-Unknown or international caller IDs are cautions, not proof of fraud. Stronger caller warnings require the user's own report. Android normally excludes saved contacts and hidden/restricted numbers from screening. A familiar caller ID can still be spoofed.
-
-## Stack and source map
-
-| Area | Implementation |
+| Feature | What it provides |
 |---|---|
-| Android | Kotlin 2.2.20, Java 17 toolchain, Android Gradle Plugin 8.13.2; minimum API 26, compile/target API 36 |
-| Host UI | Android activities, XML/Material layouts, ViewModels, LiveData and Kotlin coroutines |
-| Protection UI | Jetpack Compose, Material 3, StateFlow, lifecycle-aware state |
-| `app/` | Account, trusted circle, SOS, cloud repository, FCM receiver and host navigation |
-| `protection/` | Android protection screens, notification listener, caller screening, warning delivery, Room/SQLCipher history and Android Keystore-backed secrets |
-| `protection-core/` | Pure Kotlin URL parsing, rules, text/model scoring, caller rules, file rules, shared demo inputs and tests |
-| Cloud | Firebase Authentication, Cloud Firestore and FCM; the configured SOS HTTP service and Cloudinary voice upload |
-| `functions/` | Node.js 22 / Firebase Functions code for the optional Firestore alert-trigger path; separate from the configured SOS HTTP service |
-| Verification | JUnit, Android instrumentation/UI Automator, lint, APK signature and alignment checks |
+| **Family SOS** | Emergency alerts to approved contacts, optional location and a short voice message, callback, playback, and emergency history. |
+| **Message and link protection** | Manual checks, Android share input, and automatic checks of supported notification previews. Findings include understandable reasons and distinguish local risk signals from online reputation. |
+| **Call Shield** | Caller-ID cautions and a manageable list of numbers reported by the user. Incoming calls continue ringing normally. |
+| **Family support** | A family code-word aid and separately enabled guardian SMS support. |
+| **File and APK inspection** | On-device checks for selected file and APK risk indicators. |
+| **Accessible guidance** | English, Hindi, and Punjabi interfaces and warning audio. |
+| **Local protection history** | Encrypted records of domains, risk results, reasons, and timestamps, with bounded retention. |
+| **Built-in examples** | Harmless test inputs evaluated by the real local rules, plus a separately labelled alert preview. Test inputs and previews cannot trigger guardian actions. |
 
-The text model uses character 3–5-gram TF-IDF features with logistic regression, evaluated locally from exported assets. The old URL ExtraTrees forest remains a diagnostic/parity asset and does not determine URL verdicts because it learned a benign deep-link bias. There is no LLM in the link-checking path, and Google's internal model architecture is not claimed as our own.
+Local protection is available without an account. Family SOS requires sign-in and configured cloud services. Automatic notification checks, caller screening, and warning overlays each require their relevant Android permissions.
+
+## How protection works
+
+1. **Local analysis:** Kotlin rules examine URL structure and message context. A local text model uses character 3–5-gram TF-IDF features with logistic regression. Weak formatting clues alone do not justify an intrusive threat warning.
+2. **Optional reputation checks:** Google Safe Browsing receives four-byte URL-hash prefixes over HTTPS. Returned full hashes are compared locally; the reputation client does not send message bodies or complete URLs.
+3. **Clear results:** The app separates no local warning, caution, unconfirmed local high-risk findings, and provider findings. Failed or unavailable online checks remain **Not checked**.
+4. **Actionable warnings:** Eligible high-risk findings can open a warning screen, subject to Android permissions, background restrictions, and emergency-priority handling. Local findings remain identified as unconfirmed.
+
+The legacy URL ExtraTrees model is retained for diagnostic and parity checks; it does not determine URL verdicts. A quiet local result or a completed online no-match does not guarantee that a link is safe. Short links are checked as submitted; redirects and destination pages are not opened.
+
+Call Shield evaluates caller ID supplied by Android using local rules and the user's reported-number list. Unfamiliar or international numbers receive cautious advice; stronger wording identifies the user's own report. It does not analyze or record call audio, detect cloned voices, or automatically block calls. Caller ID can be spoofed, and Android normally excludes saved contacts and hidden or restricted numbers from screening.
+
+## Architecture
 
 ```mermaid
 flowchart LR
-    Input["Manual input / share / visible notification"] --> Local["Local Kotlin rules + text model"]
-    Local --> Merge["Combine local finding with optional reputation"]
-    Google["Google: hash-prefix request / exact local hash match"] --> Merge
-    Merge --> Result["Quiet result / caution / unconfirmed local risk / provider finding"]
-    Merge --> History["Encrypted local result metadata"]
-    Result --> Warning["Warning UI subject to Android permissions and SOS priority"]
-    Caller["Android caller ID"] --> CallRules["Caller rules + user's local reports"]
-    CallRules --> CallNotice["Advisory call notification / permitted banner"]
-    SOS["User's SOS action"] --> Cloud["Authenticated service + FCM"]
+    Input["Manual input / share / visible notification"] --> Local["Local rules + text model"]
+    Local --> Result["Risk result + explanation"]
+    Reputation["Optional Google reputation"] --> Result
+    Result --> History["Encrypted local result history"]
+    Result --> Warning["Warning UI with permission and SOS-priority checks"]
+    Caller["Android caller ID"] --> CallRules["Caller rules + local reports"]
+    CallRules --> CallNotice["Advisory notification / permitted banner"]
+    SOS["User-initiated family SOS"] --> Cloud["Authenticated service + FCM"]
     Cloud --> Family["Trusted receiver's emergency UI"]
 ```
 
-The existing SOS HTTP backend is an external deployment dependency; rebuilding this Android project does not deploy that backend, Firebase Functions or the Play Store.
-
-## Data and privacy boundaries
-
-| Data | Where it goes |
+| Module | Responsibility |
 |---|---|
-| Message text and complete submitted URL | Used in memory by local checks; not saved in protection history or sent to Google by the reputation client |
-| Protection history | Encrypted on the phone: domain, result, reasons and time; bounded retention and record count |
-| Google reputation request | Four-byte URL-hash prefixes over HTTPS; returned full hashes are matched locally. Google can see IP address and request metadata |
-| User-supplied Safe Browsing key | Encrypted using Android Keystore-backed storage on the phone; supplied directly in app settings, not embedded in source or the APK |
-| Reported caller numbers | Private app SharedPreferences on the phone, capped at 200, with individual removal and clear-all controls; separate from encrypted history |
-| Accounts, family relationships, SOS location/voice | Existing Firebase/service/media flows with their own permissions and consent |
+| `app/` | Authentication, trusted contacts, family SOS, cloud repository, FCM reception, and application navigation. |
+| `protection/` | Protection screens, notification listener, call screening, warning delivery, local history, and secure key storage. |
+| `protection-core/` | Pure Kotlin URL parsing, rules, model scoring, caller and file checks, shared examples, and unit tests. |
+| `functions/` | Node.js Firebase Functions for the optional Firestore alert-trigger route. |
+| `security/` | Firestore security-rule tests. |
 
-A completed Google no-match is not a safety guarantee. Failed or unavailable lookups remain **Not checked**. Short links are checked as submitted; destinations and redirects are not opened. The complete application is not offline or anonymous. Notification scanning only sees supported visible previews.
+Family SOS uses a configured external HTTP service alongside Firebase and media services. Building this Android project does not deploy that backend or the optional Firebase Functions route.
 
-## Build locally
+## Technology stack
 
-1. Install Android Studio, JDK 17 and Android SDK 36; use the included Gradle wrapper.
-2. Add your own matching Firebase Android configuration at `app/google-services.json`. It is ignored by Git. Configure sign-in and certificate fingerprints in that Firebase project.
-3. Configure your own cloud deployment endpoints/media setup if running the family SOS flows. Do not assume a fresh Firebase project can use another deployment's accounts or data.
-4. For optional Google checks, enable Safe Browsing API in the key's Google Cloud project, restrict the key to that API, and enter it directly under **Protection settings → Online link protection**. Saved configuration alone is not a successful lookup.
+| Area | Technologies |
+|---|---|
+| Language and build | Kotlin 2.2.20, Java 17, Gradle 8.13, Android Gradle Plugin 8.13.2 |
+| Android platform | Minimum API 26; compile and target API 36 |
+| Application UI | Android activities, XML layouts, Material Components, ViewModels, and LiveData |
+| Protection UI | Jetpack Compose, Material 3, StateFlow, and lifecycle-aware state |
+| Asynchronous work | Kotlin coroutines |
+| Local storage | Room with SQLCipher; Android Keystore-backed secret storage; private app preferences |
+| Cloud services | Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging, configured SOS HTTP service, and Cloudinary voice upload |
+| Optional backend route | Node.js 22 and Firebase Functions |
+| Validation | JUnit, Android instrumentation, UI Automator, lint, APK signature verification, and alignment checks |
+
+## Privacy and data handling
+
+| Data | Handling |
+|---|---|
+| Message text and complete submitted URL | Processed in memory; not saved in protection history or sent to Google by the reputation client. |
+| Protection history | Encrypted on the phone; stores domain, result, reasons, and time with retention and record-count limits. |
+| Reputation requests | URL-hash prefixes sent over HTTPS. Google can also see the IP address and request metadata. |
+| Safe Browsing API key | Entered in app settings and encrypted using Android Keystore-backed storage. It is not embedded in the source or distributed APK. |
+| Reported caller numbers | Stored in private app preferences, separately from encrypted history; capped at 200 with individual removal and clear-all controls. |
+| Guardian support | When separately enabled and eligible, sends a generic carrier SMS to the saved guardian number without the scanned message or URL. |
+| Accounts, family relationships, SOS location, and voice | Use the configured Firebase, HTTP service, and media flows with their own permissions and consent. |
+
+Notification scanning is limited to supported visible previews. Local history does not make the entire application offline or anonymous; reputation and family services use network connections.
+
+## Getting started
+
+1. Install the [published APK](https://github.com/ASRcodes/root-security/releases/tag/v3.2-final).
+2. Choose **Open protection without sign-in** for local protection, or sign in to use family features. Signed-in users can open the **Protection** tab.
+3. Enable the Android permissions for the features you want: notification access for automatic message checks, notifications for alerts, and the call-screening role for Call Shield. Overlays require separate permission and the app's overlay setting.
+4. To enable online checks, enter a Safe Browsing API key under **Protection settings → Online link protection**. The API must be enabled in the key's Google Cloud project, with compatible key restrictions.
+5. Configure approved contacts and the required cloud services for Family SOS. For guardian support, save a guardian number, enable the option, and grant SMS permission.
+
+## Build from source
+
+Install Android Studio, JDK 17, and Android SDK 36, then clone this repository:
+
+```powershell
+git clone https://github.com/ASRcodes/root-security.git
+cd root-security
+```
+
+Add your Firebase Android configuration at `app/google-services.json` and configure the corresponding sign-in providers and signing-certificate fingerprints. The application ID is `com.asrcodes.dontmissmom`. Configure your own backend endpoints and media setup for family SOS. Firebase configuration, signing files, and local secrets are excluded from Git.
+
+Build the APK and run the JVM and lint checks:
 
 ```powershell
 .\gradlew.bat :protection-core:test :protection:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:lintDebug :protection:lintDebug
 ```
 
-The debug APK is generated at `app/build/outputs/apk/debug/app-debug.apk`. Run reset-capable instrumentation only on a disposable emulator; see the explicit-device commands in [Demo script](docs/DEMO_SCRIPT.md). Call Shield requires Android 10/API 29 or later plus a supported screening role, even though other app features support API 26.
+Output: `app/build/outputs/apk/debug/app-debug.apk`.
 
-Release signing uses ignored local `keystore.properties` or the `DMM_KEYSTORE_*` / `DMM_KEY_*` environment variables. Never commit keystores, passwords, service-account files, private API keys or Cloudinary secrets. The existing Safe Browsing integration is for a noncommercial prototype; assess [Google's terms](https://developers.google.com/safe-browsing/terms) and an appropriately licensed service before commercialization.
+Release signing uses an ignored `keystore.properties` file or the `DMM_KEYSTORE_FILE`, `DMM_KEYSTORE_PASSWORD`, `DMM_KEY_ALIAS`, and `DMM_KEY_PASSWORD` environment variables. Updating an existing installation requires a matching signing certificate. Run instrumentation that can reset application data only on a disposable emulator.
 
-## Evidence, history and attribution
+## Release validation
 
-[Judge brief](docs/JUDGE_BRIEF.md) covers the current architecture, next-six-hour priorities and eight likely judge questions with answers.
+The recorded results apply to the published **v3.2-final** APK:
 
-[Final submission](docs/FINAL_SUBMISSION.md) is the current status record. Older documents—including `PROTECTION_INTEGRATION.md`, `ROOT_SECURITY_URL_CHECKS.md`, `ROOT_SECURITY_RESEARCH_AND_PITCH.md`, `RELEASE_2_1.md`, `V2_*` and earlier JSON/test reports—are historical snapshots. Their feature descriptions, test totals and prior HTTP 403 observations must not be presented as verification of 3.2-final.
+| Check | Recorded result |
+|---|---|
+| JVM tests | 139 passed; one optional test skipped. |
+| Android checks | 33 distinct checks have passing final results across an initial API 36 run and targeted API 26 retries. |
+| Lint | Zero errors; warnings and hints remain in the recorded report. |
+| APK integrity | Signature verification and 16 KB alignment checks passed; SHA-256 is recorded with the release. |
+| Incoming SMS path | A simulated normal SMS produced no warning; the reserved high-risk example reached the production notification listener and opened a labelled warning. |
+| Incoming call path | A simulated radio call reached Android's screening callback and produced the local reported-number warning. |
 
-This application builds on DontMissMOM, originally credited to [Anubhav Singh / ASRcodes](https://github.com/ASRcodes), and the Suraksha Kavach protection module. The existing [protection module license](protection/LICENSE) is preserved. This README does not grant a new repository-wide license or replace existing third-party notices.
+See the [machine-readable verification record](docs/validation/final-evidence.json) and [APK verification output](docs/validation/apk-verification.txt) for details. The Android results are accumulated across runs, not one clean full-suite run. Live Google reputation, physical-phone/carrier behavior, and deployed cloud SOS delivery remain unverified for this release. Test totals do not establish a detection-accuracy percentage.
+
+## Future development
+
+- Evaluate false positives and missed threats on representative multilingual messages and links.
+- Improve notification and warning reliability across devices, Android versions, and accessibility settings.
+- Extend redirect and destination assessment while preserving privacy and clear uncertainty.
+- Strengthen production credential management, cloud deployment, and end-to-end family-alert delivery testing.
+
+File/APK checks cover selected risk indicators and do not provide complete antivirus scanning. Warning presentation and emergency delivery depend on device permissions, operating-system policy, connectivity, and configured services.
+
+## Attribution and licensing
+
+root-security builds on DontMissMOM, originally credited to [Anubhav Singh / ASRcodes](https://github.com/ASRcodes), and the Suraksha Kavach protection module. The existing [protection module license](protection/LICENSE) and third-party notices are preserved; this README does not establish a new repository-wide license. Review the [Google Safe Browsing terms](https://developers.google.com/safe-browsing/terms) for the intended deployment.
