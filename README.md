@@ -60,6 +60,17 @@ The legacy URL ExtraTrees model is retained for diagnostic and parity checks; it
 
 Call Shield evaluates caller ID supplied by Android using local rules and the user's reported-number list. Unfamiliar or international numbers receive cautious advice; stronger wording identifies the user's own report. It does not analyze or record call audio, detect cloned voices, or automatically block calls. Caller ID can be spoofed, and Android normally excludes saved contacts and hidden or restricted numbers from screening.
 
+### Connectivity requirements
+
+| Feature | Network requirement |
+|---|---|
+| Bundled message/link rules, selected file checks, family code and local history | Local processing, with the relevant engine, storage and file access available. |
+| Google reputation | Internet access, configured key and enabled online checks. |
+| Family SOS cloud delivery | Connectivity and the configured account, backend and push services. |
+| Guardian SMS | Carrier SMS service and its separate permission/settings; mobile data is not the delivery channel. |
+
+The offline Family SOS fallback can open the phone's SMS composer for one eligible contact. The user sends that carrier message; it is separate from cloud SOS delivery and automatic guardian SMS.
+
 ## Architecture
 
 ```mermaid
