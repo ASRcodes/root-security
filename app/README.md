@@ -18,6 +18,12 @@ The host depends on `:protection`, Firebase Authentication, Firestore, FCM and G
 
 [VoiceRecorderHelper](src/main/java/com/asrcodes/dontmissmom/VoiceRecorderHelper.kt) records an explicit five-second microphone memo and uploads it to the configured Cloudinary service. It does not capture call audio. Account, family, location and voice data belong to the cloud flows, separately from local protection history.
 
+## Account and local entry routing
+
+[LoginActivity](src/main/java/com/asrcodes/dontmissmom/LoginActivity.kt) routes incomplete first-launch setup through the location disclosure, signed-in profiles without a phone through [PhoneLinkActivity](src/main/java/com/asrcodes/dontmissmom/PhoneLinkActivity.kt), and completed profiles into family SOS. Choosing local protection opens the protection home page directly. That choice does not sign out an existing account; a saved selection prevents a late authentication callback from replacing the chosen screen.
+
+[FirstLaunchPermissions](src/main/java/com/asrcodes/dontmissmom/FirstLaunchPermissions.kt) accepts approximate location. Declining optional permissions still allows sign-in and basic SOS after the disclosure step; a location attachment needs the corresponding consent and permission. Phone linking validates the entered format and waits for the repository update before continuing.
+
 ## Checks
 
 From the repository root:
