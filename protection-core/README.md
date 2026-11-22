@@ -30,6 +30,14 @@ Recent-scan fingerprints combine source, URL and bounded message text. The in-me
 
 A `ScanResult` contains the parsed host, verdict and timestamp rather than the complete message or URL. Text-only input goes through text evaluation: a safe result is omitted, a warning has an empty domain, and the per-URL transform is not called.
 
+## Shared examples and reason labels
+
+[DemoExamples](src/main/kotlin/org/suraksha/core/DemoExamples.kt) supplies ordinary classifier input strings, not hard-coded verdicts. [FinalDemoPolicyTest](src/test/kotlin/org/suraksha/core/FinalDemoPolicyTest.kt) checks that normal examples stay quiet and that reserved-domain examples exercise the expected warning levels.
+
+The example marker applies after classification when the parsed host is `example` or ends in `.example`; it preserves the score and level, including a safe level. Text containing `.example` only in a path, query or username does not qualify. Labels distinguish test input, synthetic previews (`DEMO_ONLY`), provider fixtures (`PROVIDER_TEST`) and unconfirmed local risk (`LOCAL_RISK`).
+
+[ReasonMessages](src/main/kotlin/org/suraksha/core/ReasonMessages.kt) provides English, Hindi and Punjabi explanations, with English fallback for unsupported languages. Provider/test labels precede specific local reasons, followed by no-match, not-checked and file-scan context. Keep those distinctions when presenting a verdict in a new UI.
+
 ## JVM tests
 
 From the repository root with JDK 17:
