@@ -18,6 +18,20 @@ Reservations precede FCM calls. Existing reservations prevent replay of ambiguou
 
 [firebase.json](../firebase.json) selects this Functions directory. Deployment scripts use the selected Firebase project and are separate from local verification. Review the configured service/account prefixes for your own deployment.
 
+## Push payload contract
+
+[message.js](message.js) builds an FCM data payload for the target token, with Android high priority and a 120,000 ms time-to-live. It does not include an FCM notification object; the receiving Android application controls presentation. Priority and TTL do not guarantee delivery.
+
+| Data fields | Encoding and constraints |
+|---|---|
+| `type`, `alertId`, `fromUid`, `toUid` | Emergency type is `EMERGENCY_CALL`; IDs identify the alert and its participants. |
+| `fromName`, `fromPhone` | Sender profile values, bounded to 120 and 32 characters respectively; name falls back to `A trusted contact`. |
+| `latitude`, `longitude`, `hasLocation` | String values; coordinates must be finite and in range. Zero/zero requires explicit `hasLocation: true` to count as a location. Invalid/absent location becomes zero coordinates with `false`. |
+| `sentAt` | Send-time epoch milliseconds encoded as a string. |
+| `voiceUrl` | Optional; retained only under the configured HTTPS Cloudinary account and raw/video upload prefix. |
+
+Profile lookup, mutual trust and delivery reservation happen in [index.js](index.js) before payload submission. The builder's input checks are not a substitute for those authorization steps.
+
 ## Local tests
 
 From the repository root with Node.js 22:
