@@ -8,6 +8,22 @@ A historical read-only inspection dated 2026-09-24 recorded permissive live rule
 
 The checked-in v2 rules scope profiles to their owners and restrict client profile updates to the FCM token. Profile/phone changes and contact creation/acceptance use the matching backend. Trusted contacts can block or remove relationships. Requests, reports, alerts and history have scoped access; bookkeeping collections have no client permissions.
 
+## Client collection access
+
+The checked-in [firestore.rules](../firestore.rules) defines these client SDK permissions. Server Admin SDK endpoints require their own authorization checks and are outside this matrix.
+
+| Collection | Client reads | Client writes |
+|---|---|---|
+| `users/{uid}` | Owner can get their profile; no profile listing. | Owner can update only the FCM token and its timestamp; token length is limited to 4,096 characters and changed timestamps must equal request time. |
+| `users/{uid}/trustedContacts/{contactUid}` | Either relationship participant. | Owner can change the boolean block flag; either participant can delete. Creation is a backend operation. |
+| `requests/{id}` | Participants can read; a signed-in get of a nonexistent request is allowed. Queries must satisfy participant restrictions. | Recipient can change only a pending request's status to rejected. Creation and acceptance are backend operations. |
+| `reports/{id}` | Reporting account only. | Backend only. |
+| `alerts/{id}` | Recipient only. | Sender can create an allowed-field payload for a different recipient with mutual unblocked trust. Recipient can change only `handled` to `true`. |
+| `history/{id}` | Record owner only. | Owner of a received record can update allowed siren state/receipt fields; changed timestamps must equal request time. Creation and deletion are backend operations. |
+| Other collections | No client access. | No client access; includes delivery, phone, rate-limit and voice-cleanup bookkeeping. |
+
+Allowed received-history siren states are `received`, `ringing`, `stopped`, `timed_out` and `interrupted`. The [rules test suite](rules.test.js) exercises these boundaries against the local emulator; it does not certify the rules currently deployed to a live project.
+
 ## Run locally
 
 Use Node.js/npm, the Firebase CLI and a compatible Firestore-emulator Java runtime. From the repository root:
