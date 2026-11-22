@@ -20,6 +20,19 @@ Reputation sends four-byte URL-hash prefixes, not complete URLs or message bodie
 
 [GuardianManager](src/main/kotlin/org/suraksha/kavach/family/GuardianManager.kt) sends a generic carrier SMS only when configured, enabled, permitted and eligible. Manual message checks and test-labelled findings do not trigger it. Android permissions, background policy and host SOS priority constrain warnings. File checks cover selected indicators rather than complete antivirus scanning.
 
+## Notification ingestion limits
+
+[KavachNotificationListener](src/main/kotlin/org/suraksha/kavach/notifications/KavachNotificationListener.kt) accepts a fixed set of supported messaging/mail packages plus the current default SMS app. It ignores group summaries and this application's own notifications. It uses the latest messaging-style message when available, otherwise big text or preview text.
+
+| Bound | Behavior |
+|---|---|
+| Preview text | At most 16,384 characters enter processing. |
+| Pending previews | The transient queue holds 32 items and drops the oldest when full. |
+| Extracted URLs | At most 24 distinct URLs are considered. |
+| Recent scans | The core retains up to 256 fingerprints for a 60-second duplicate window. |
+
+Manual checks bypass duplicate suppression. Text without a URL produces a result only when local analysis finds a warning. Online reputation is requested before core duplicate suppression, so duplicate notifications are not guaranteed to avoid all network work; the reputation cache is a separate control.
+
 ## Checks
 
 From the repository root:
