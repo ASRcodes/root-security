@@ -101,7 +101,7 @@ flowchart LR
 
 | Module | Responsibility |
 |---|---|
-| `app/` | Authentication, trusted contacts, family SOS, cloud repository, FCM reception, and application navigation. |
+| [`app/`](app/README.md) | Authentication, trusted contacts, family SOS, cloud repository, FCM reception, and application navigation. |
 | `protection/` | Protection screens, notification listener, call screening, warning delivery, local history, and secure key storage. |
 | `protection-core/` | Pure Kotlin URL parsing, rules, model scoring, caller and file checks, shared examples, and unit tests. |
 | `functions/` | Node.js Firebase Functions for the optional Firestore alert-trigger route. |
