@@ -160,6 +160,18 @@ Notification scanning is limited to supported visible previews. Local history do
 
 Start with local manual checks, then enable access for the additional features you choose to use.
 
+### Troubleshooting
+
+| Symptom | What to check |
+|---|---|
+| Manual checks work, incoming previews do not | Enable automatic protection and notification access; ensure the source app posts a supported visible preview. If access is granted but disconnected, reopen root-security or toggle access off and on. |
+| An alert is missing or stays in notifications | Review Android notification/channel settings, full-screen access where available, and the overlay permission plus app setting. Device policy can still limit presentation. |
+| Online results show Not checked | Read the last lookup status. Check connectivity, API availability, key restrictions, quota or timeout diagnostics. Saving a key alone does not establish service access. |
+| Call Shield receives no callback | Verify Android 10+, role availability and caller cautions. Saved contacts and hidden/restricted caller IDs normally are not supplied for screening. |
+| Guardian SMS is not sent | Verify the saved number, opt-in setting, SMS permission and carrier service. Manual checks and test-labelled inputs intentionally do not trigger it. |
+
+When reporting a problem, include the app version, Android version, entry path and visible status. Remove account details, API keys, personal numbers and URL tokens.
+
 ## Build from source
 
 Install Android Studio, JDK 17, and Android SDK 36, then clone this repository:
