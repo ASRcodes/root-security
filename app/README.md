@@ -38,6 +38,14 @@ The main screen can send to one trusted contact or the eligible circle after con
 
 [AlertHttpCall](src/main/java/com/asrcodes/dontmissmom/AlertHttpCall.kt) performs one POST with a two-minute overall deadline and no automatic replay. The matching backend must honor the alert ID for idempotency when a user retries an unconfirmed request.
 
+## Incoming alert and siren lifecycle
+
+Push handling rejects alerts with an explicit send time older than five minutes. The foreground observer separately considers recent, unhandled alerts from existing unblocked contacts while the UI is started. [AlertDelivery](src/main/java/com/asrcodes/dontmissmom/AlertDelivery.kt) checks that the recipient matches the signed-in account and suppresses repeated nonblank alert IDs for five minutes when notifications are enabled.
+
+If notifications are disabled, delivery attempts a receipt update and returns without starting the siren. Otherwise it posts an actionable notification and attempts the foreground service; Android settings and background restrictions still apply.
+
+[EmergencySoundService](src/main/java/com/asrcodes/dontmissmom/EmergencySoundService.kt) limits each accepted start to five minutes, including vibration-only alerts. A replacement marks the previous alert interrupted; timeout records `timed_out` and leaves a quiet history notification. Stop, dismiss, call-back, map and voice actions end the siren. Shutdown releases playback, vibration, audio focus and the wake lock. Alarm volume is restored only if it still matches the service-set value, preserving later user changes. Receipt and siren status updates are asynchronous and do not prove that someone read the alert.
+
 ## Checks
 
 From the repository root:
