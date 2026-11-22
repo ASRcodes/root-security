@@ -6,7 +6,7 @@ root-security is a native Android application that brings family emergency alert
 
 **Final submission: 3.2-final · Version code 8**
 
-[Download the APK](https://github.com/ASRcodes/root-security/releases/download/v3.2-final/root-security-3.2-final.apk) · [Release notes](https://github.com/ASRcodes/root-security/releases/tag/v3.2-final) · [Verification record](docs/validation/final-evidence.json)
+[Download the APK](https://github.com/ASRcodes/root-security/releases/download/v3.2-final/root-security-3.2-final.apk) · [Release notes](https://github.com/ASRcodes/root-security/releases/tag/v3.2-final) · [Verification record](docs/validation/final-evidence.json) · [Open Innovation presentation](docs/presentation/root-security-open-innovation.pptx)
 
 The published APK is debug-signed for evaluation. Android 8.0 / API 26 or later is required; Call Shield requires a supported Android 10 / API 29+ call-screening role.
 
