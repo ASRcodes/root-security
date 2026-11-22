@@ -22,6 +22,14 @@ The engine loads bundled [model and domain assets](../protection/src/main/assets
 
 The core does not open links or resolve redirects. Local high-risk findings remain unconfirmed, and a provider no-match neither guarantees safety nor erases corroborated local evidence.
 
+## Pipeline input and duplicate suppression
+
+[MessagePipeline](src/main/kotlin/org/suraksha/core/MessagePipeline.kt) processes at most the first 16,384 UTF-16 code units. [UrlExtractor](src/main/kotlin/org/suraksha/core/UrlExtractor.kt) trims surrounding punctuation, supplies `https://` for bare addresses and returns at most 24 distinct links. Blank input produces no results.
+
+Recent-scan fingerprints combine source, URL and bounded message text. The in-memory cache holds at most 256 fingerprints for 60 seconds; clearing the pipeline clears that memory, and callers can use `deduplicate = false` for repeat manual checks. Suppression happens before local scoring and the optional per-URL transform inside this pipeline. The Android host can perform reputation work before invoking it.
+
+A `ScanResult` contains the parsed host, verdict and timestamp rather than the complete message or URL. Text-only input goes through text evaluation: a safe result is omitted, a warning has an empty domain, and the per-URL transform is not called.
+
 ## JVM tests
 
 From the repository root with JDK 17:
