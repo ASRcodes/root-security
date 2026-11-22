@@ -57,6 +57,14 @@ A stronger warning for a stored number means that it was reported locally. It is
 
 The background job has a nominal 15-minute interval and a battery-not-low constraint, so Android decides the actual execution time. The manual **Check new files now** action requests a check without waiting for that interval. Stopping the watcher cancels its job and releases the stored folder grant.
 
+## Retention, pause and reset
+
+Protection history defaults to seven-day retention. Pruning runs at startup, after saves and when retention changes; [RetentionJob](src/main/kotlin/org/suraksha/kavach/data/RetentionJob.kt) also requests periodic work at a nominal twelve-hour interval. Android scheduling means this is not an exact deletion deadline.
+
+Turning off Automatic protection pauses notification processing and watched-folder work while preserving settings and saved data. This pause does not flush queued work or cancel an active request; processing already underway may continue until its next protection gate. Manual message checks and selected-file checks remain available. Caller cautions and online reputation have their own controls.
+
+[KavachApplication](src/main/kotlin/org/suraksha/kavach/KavachApplication.kt) implements the broader protection reset: it invalidates queued work, dismisses warnings, clears protection history, the online key, guardian configuration, family code, watched-folder configuration, caller reports, temporary files and downloaded-list data. It restores preferences with automatic protection and caller cautions paused. A failed reset can be partial and remains paused so it can be retried. The host account, trusted circle, SOS history and SOS settings are outside this protection reset. Android notification/overlay grants and the call-screening role are also retained.
+
 ## Checks
 
 From the repository root:
