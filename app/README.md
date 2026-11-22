@@ -46,6 +46,14 @@ If notifications are disabled, delivery attempts a receipt update and returns wi
 
 [EmergencySoundService](src/main/java/com/asrcodes/dontmissmom/EmergencySoundService.kt) limits each accepted start to five minutes, including vibration-only alerts. A replacement marks the previous alert interrupted; timeout records `timed_out` and leaves a quiet history notification. Stop, dismiss, call-back, map and voice actions end the siren. Shutdown releases playback, vibration, audio focus and the wake lock. Alarm volume is restored only if it still matches the service-set value, preserving later user changes. Receipt and siren status updates are asynchronous and do not prove that someone read the alert.
 
+## Voice attachment handling
+
+The attachment moves through empty, recording, uploading and ready states. Recording requires microphone permission; the UI checks connectivity before starting and disables SOS submission while the attachment is being prepared. [VoiceRecorderHelper](src/main/java/com/asrcodes/dontmissmom/VoiceRecorderHelper.kt) records a five-second 3GP memo, uploads it through the configured Cloudinary preset, and removes the temporary local recording after completion, failure or release.
+
+The ViewModel ignores callbacks from superseded recording attempts. A pending SOS keeps its selected attachment for retry. After a completely successful send batch, automatic clearing of the matching selection requires that no pending alert still references it. Manually clearing the selection does not change attachments already captured by pending alerts. [IncomingAlert](src/main/java/com/asrcodes/dontmissmom/IncomingAlert.kt) accepts voice playback URLs only under the configured HTTPS host and upload path.
+
+[VoiceRegistrationQueue](src/main/java/com/asrcodes/dontmissmom/VoiceRegistrationQueue.kt) stores pending registration work in account-keyed private preferences and retries on resume or connectivity changes. Registration supports backend ownership and cleanup bookkeeping; it does not itself confirm remote media deletion.
+
 ## Checks
 
 From the repository root:
