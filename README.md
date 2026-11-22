@@ -208,6 +208,22 @@ The recorded results apply to the published **v3.2-final** APK:
 
 See the [machine-readable verification record](docs/validation/final-evidence.json) and [APK verification output](docs/validation/apk-verification.txt) for details. The Android results are accumulated across runs, not one clean full-suite run. Live Google reputation, physical-phone/carrier behavior, and deployed cloud SOS delivery remain unverified for this release. Test totals do not establish a detection-accuracy percentage.
 
+### Verify the downloaded APK
+
+After downloading `root-security-3.2-final.apk`, calculate its SHA-256 in PowerShell:
+
+```powershell
+Get-FileHash -LiteralPath .\root-security-3.2-final.apk -Algorithm SHA256
+```
+
+For the published `v3.2-final` artifact, the expected value is:
+
+```text
+100560a08fe6cc85b3fd6a8be48c10d75ae9f112517f3b3444c517f28e2ab66b
+```
+
+This identifies the exact file in the release evidence. Rebuilding or changing signing credentials can produce a different APK hash; do not reuse this value for a new build.
+
 ## Future development
 
 - Evaluate false positives and missed threats on representative multilingual messages and links.
