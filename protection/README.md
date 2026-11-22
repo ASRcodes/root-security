@@ -41,6 +41,14 @@ Manual checks bypass duplicate suppression. Text without a URL produces a result
 
 Changing the key or disabling online checks invalidates pending answers, cancels the active request and clears cached results. Disabling preserves the encrypted key for later use; removing the key deletes it. Saving a key confirms local configuration, while a completed lookup is needed to establish that the service is reachable and accepts the configuration.
 
+## Local caller report controls
+
+[CallShieldSettings](src/main/kotlin/org/suraksha/kavach/ui/CallShieldSettings.kt) provides add, remove and clear actions for locally reported numbers. Numbers are normalized before storage and comparison. The list holds up to 200 entries; adding a new number beyond the limit fails instead of silently evicting an existing report.
+
+Eligible caller caution notifications can also offer a report action. [CallAlerts](src/main/kotlin/org/suraksha/kavach/calls/CallAlerts.kt) requires the active screening role and enabled caller cautions for these actions, and expires them after ten minutes. Disabling cautions, removing or clearing reports, or resetting protection invalidates old report actions.
+
+A stronger warning for a stored number means that it was reported locally. It is not a verified fraud finding or a shared caller-reputation database. These controls remain separate from message/link protection and do not block ringing.
+
 ## Checks
 
 From the repository root:
