@@ -60,6 +60,19 @@ The legacy URL ExtraTrees model is retained for diagnostic and parity checks; it
 
 Call Shield evaluates caller ID supplied by Android using local rules and the user's reported-number list. Unfamiliar or international numbers receive cautious advice; stronger wording identifies the user's own report. It does not analyze or record call audio, detect cloned voices, or automatically block calls. Caller ID can be spoofed, and Android normally excludes saved contacts and hidden or restricted numbers from screening.
 
+### Reading a check result
+
+| Result | Meaning |
+|---|---|
+| No warning signs found | The local rules found no strong warning signal; this is not a safety certificate. |
+| Suspicious pattern | A local caution that remains unconfirmed. |
+| Local high-risk warning | Corroborating local clues warrant stronger guidance; the source remains local and unconfirmed. |
+| Google threat finding | A supplied URL hash matched returned provider threat information. |
+| No known threat found | The completed provider lookup found no match; any separate local reasons still matter. |
+| Online check not completed / Not checked | No completed, current online result is available. Check configuration or the reported error before retrying. |
+
+Saved history describes the recorded scan time. Provider findings expire after at most 30 minutes; history is not a permanent statement about a website.
+
 ### Connectivity requirements
 
 | Feature | Network requirement |
