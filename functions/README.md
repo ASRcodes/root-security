@@ -32,6 +32,14 @@ Reservations precede FCM calls. Existing reservations prevent replay of ambiguou
 
 Profile lookup, mutual trust and delivery reservation happen in [index.js](index.js) before payload submission. The builder's input checks are not a substitute for those authorization steps.
 
+## History and voice cleanup records
+
+[legacyHistory.js](legacyHistory.js) reserves an alert transactionally and creates separate sent and received history records with the corresponding owners. Existing delivery reservations prevent a second reservation of the same alert ID. Sender history does not retain the voice URL; receiver history may retain it while eligible.
+
+Trimming retains voice URLs on the ten newest received records that contain recordings per owner. Text-only records do not consume this quota. Voice URLs are removed from sent records and received recordings beyond the quota; history metadata remains. Matching recipient alert records are marked voice-expired when their reference is removed.
+
+Voice assets are tracked using a SHA-256 key derived from the URL. An existing asset marked deleting/deleted or owned by another account is not attached to received history; this check does not remove a voice URL already placed in the outgoing push payload. Active references receive a ten-minute pin, and expired references produce cleanup records with a ten-minute delay. Trimming handles up to 150 excess history records per transaction, with additional related alert and cleanup writes, and retains a pending-trim flag while work remains. A separate cleanup implementation must consume those records and remove remote media; this package does not perform that deletion.
+
 ## Local tests
 
 From the repository root with Node.js 22:
