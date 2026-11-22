@@ -105,7 +105,7 @@ flowchart LR
 | [`protection/`](protection/README.md) | Protection screens, notification listener, call screening, warning delivery, local history, and secure key storage. |
 | [`protection-core/`](protection-core/README.md) | Pure Kotlin URL parsing, rules, model scoring, caller and file checks, shared examples, and unit tests. |
 | [`functions/`](functions/README.md) | Node.js Firebase Functions for the optional Firestore alert-trigger route. |
-| `security/` | Firestore security-rule tests. |
+| [`security/`](security/README.md) | Firestore security-rule tests. |
 
 Family SOS uses a configured external HTTP service alongside Firebase and media services. Building this Android project does not deploy that backend or the optional Firebase Functions route.
 
