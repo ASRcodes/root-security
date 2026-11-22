@@ -38,6 +38,17 @@ The published APK is debug-signed for evaluation. Android 8.0 / API 26 or later 
 
 Local protection is available without an account. Family SOS requires sign-in and configured cloud services. Automatic notification checks, caller screening, and warning overlays each require their relevant Android permissions.
 
+### Device compatibility
+
+| Capability | Requirement |
+|---|---|
+| Install and use local protection | Android 8.0 / API 26 or later. |
+| Call Shield | Android 10 / API 29 or later, an available call-screening role, and caller cautions enabled. |
+| App alert notifications | Android notification settings; runtime notification permission on Android 13 / API 33+. |
+| Full-screen presentation | Device/background policy and applicable special access; Android 14 / API 34+ access is checked separately. |
+
+Telephony hardware is optional for installation. A tablet can use local checks without supporting cellular calls or carrier SMS.
+
 ## How protection works
 
 1. **Local analysis:** Kotlin rules examine URL structure and message context. A local text model uses character 3–5-gram TF-IDF features with logistic regression. Weak formatting clues alone do not justify an intrusive threat warning.
