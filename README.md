@@ -10,6 +10,19 @@ root-security is a native Android application that brings family emergency alert
 
 The published APK is debug-signed for evaluation. Android 8.0 / API 26 or later is required; Call Shield requires a supported Android 10 / API 29+ call-screening role.
 
+## Contents
+
+- [Features](#features)
+- [How protection works](#how-protection-works)
+- [Architecture](#architecture)
+- [Technology stack](#technology-stack)
+- [Privacy and data handling](#privacy-and-data-handling)
+- [Getting started](#getting-started)
+- [Build from source](#build-from-source)
+- [Release validation](#release-validation)
+- [Future development](#future-development)
+- [Attribution and licensing](#attribution-and-licensing)
+
 ## Features
 
 | Feature | What it provides |
