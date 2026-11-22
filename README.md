@@ -132,6 +132,21 @@ Notification scanning is limited to supported visible previews. Local history do
 4. To enable online checks, enter a Safe Browsing API key under **Protection settings → Online link protection**. The API must be enabled in the key's Google Cloud project, with compatible key restrictions.
 5. Configure approved contacts and the required cloud services for Family SOS. For guardian support, save a guardian number, enable the option, and grant SMS permission.
 
+### Permission reference
+
+| Android access | Used for |
+|---|---|
+| Notification access | Reading supported visible notification previews for automatic checks; this is not SMS-inbox access. |
+| Notifications | Displaying app alerts; separate from notification-listener access. |
+| Call-screening role | Receiving caller IDs that Android makes available to Call Shield. |
+| Draw over other apps | Optional warning banners, together with the app's overlay setting. |
+| Microphone | A user-initiated SOS voice attachment, not telephone-call audio. |
+| Approximate or precise location | Optional location attached to a family SOS. |
+| Send SMS | Separately enabled guardian support to a saved number. |
+| File or folder picker grant | Reading only the selected content URI or folder; no broad storage permission is requested. |
+
+Start with local manual checks, then enable access for the additional features you choose to use.
+
 ## Build from source
 
 Install Android Studio, JDK 17, and Android SDK 36, then clone this repository:
