@@ -33,6 +33,14 @@ Reputation sends four-byte URL-hash prefixes, not complete URLs or message bodie
 
 Manual checks bypass duplicate suppression. Text without a URL produces a result only when local analysis finds a warning. Online reputation is requested before core duplicate suppression, so duplicate notifications are not guaranteed to avoid all network work; the reputation cache is a separate control.
 
+## Reputation batching and cache expiry
+
+[OnlineUrlChecker](src/main/kotlin/org/suraksha/kavach/reputation/OnlineUrlChecker.kt) checks the first six distinct eligible links in a batch. Links outside that bound remain Not checked. Missing hash prefixes are combined into one bounded request; a returned prefix alone is insufficient for a threat finding because the full hash is compared locally.
+
+[ReputationCache](src/main/kotlin/org/suraksha/kavach/reputation/ReputationCache.kt) holds at most 512 prefix records. Provider cache durations are honored up to a 30-minute cap for records with matches and a 24-hour cap for records without matches; shorter provider durations expire sooner.
+
+Changing the key or disabling online checks invalidates pending answers, cancels the active request and clears cached results. Disabling preserves the encrypted key for later use; removing the key deletes it. Saving a key confirms local configuration, while a completed lookup is needed to establish that the service is reachable and accepts the configuration.
+
 ## Checks
 
 From the repository root:
