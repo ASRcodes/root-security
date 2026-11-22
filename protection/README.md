@@ -49,6 +49,14 @@ Eligible caller caution notifications can also offer a report action. [CallAlert
 
 A stronger warning for a stored number means that it was reported locally. It is not a verified fraud finding or a shared caller-reputation database. These controls remain separate from message/link protection and do not block ringing.
 
+## Selected file and folder scan bounds
+
+[FileScanner](src/main/kotlin/org/suraksha/kavach/files/FileScanner.kt) reads a user-selected content URI up to 100 MiB. It streams SHA-256 against bundled hashes and checks available APK metadata, selected permissions, accessibility/device-admin indicators and filenames. It does not install or execute the selected file. Unreadable or oversized content returns an unreadable caution rather than a clean result.
+
+[FolderWatcher](src/main/kotlin/org/suraksha/kavach/files/FolderWatcher.kt) watches one folder using a persisted read grant. Choosing it starts a checkpoint at the selection time; this is not a scan of every historical file. Each run is nonrecursive, examines at most 1,000 entries and scans at most 20 eligible files. Detection of new content depends on the provider's timestamps.
+
+The background job has a nominal 15-minute interval and a battery-not-low constraint, so Android decides the actual execution time. The manual **Check new files now** action requests a check without waiting for that interval. Stopping the watcher cancels its job and releases the stored folder grant.
+
 ## Checks
 
 From the repository root:
