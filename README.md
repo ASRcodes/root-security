@@ -193,6 +193,19 @@ Output: `app/build/outputs/apk/debug/app-debug.apk`.
 
 Release signing uses an ignored `keystore.properties` file or the `DMM_KEYSTORE_FILE`, `DMM_KEYSTORE_PASSWORD`, `DMM_KEY_ALIAS`, and `DMM_KEY_PASSWORD` environment variables. Updating an existing installation requires a matching signing certificate. Run instrumentation that can reset application data only on a disposable emulator.
 
+### Developer guides
+
+| Area | Implementation guide |
+|---|---|
+| Account entry and family SOS | [Routing](app/README.md#account-and-local-entry-routing), [send/retry states](app/README.md#sos-selection-and-retry-status), [incoming alerts](app/README.md#incoming-alert-and-siren-lifecycle) and [voice attachments](app/README.md#voice-attachment-handling). |
+| Notification and online checks | [Ingestion limits](protection/README.md#notification-ingestion-limits) and [reputation batching/cache](protection/README.md#reputation-batching-and-cache-expiry). |
+| Device protection controls | [Caller reports](protection/README.md#local-caller-report-controls), [file/folder bounds](protection/README.md#selected-file-and-folder-scan-bounds) and [retention/reset](protection/README.md#retention-pause-and-reset). |
+| Portable detection core | [Pipeline contract](protection-core/README.md#pipeline-input-and-duplicate-suppression), [example labels](protection-core/README.md#shared-examples-and-reason-labels) and [optional feed evaluation](protection-core/README.md#optional-feed-evaluation). |
+| Optional Firebase Functions route | [Push payload](functions/README.md#push-payload-contract), [history/voice records](functions/README.md#history-and-voice-cleanup-records) and [local tests](functions/README.md#local-tests). |
+| Firestore client authorization | [Collection access matrix](security/README.md#client-collection-access) and [emulator verification](security/README.md#run-locally). |
+
+Each module guide links to its source and available checks. Local fixtures and emulator results have different scope from live provider, carrier and cloud delivery; the release record below identifies the verification already completed.
+
 ## Release validation
 
 The recorded results apply to the published **v3.2-final** APK:
