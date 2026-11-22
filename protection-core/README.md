@@ -38,6 +38,24 @@ The example marker applies after classification when the parsed host is `example
 
 [ReasonMessages](src/main/kotlin/org/suraksha/core/ReasonMessages.kt) provides English, Hindi and Punjabi explanations, with English fallback for unsupported languages. Provider/test labels precede specific local reasons, followed by no-match, not-checked and file-scan context. Keep those distinctions when presenting a verdict in a new UI.
 
+## Optional feed evaluation
+
+[FeedEvaluationTest](src/test/kotlin/org/suraksha/core/FeedEvaluationTest.kt) evaluates already downloaded strings with empty message context; it does not open the supplied URLs.
+
+| Local file | Expected input and sampling |
+|---|---|
+| `openphish.txt` | URL lines beginning with `http`; all matching lines are evaluated. |
+| `phishing_army.txt` | Nonblank, non-comment domains; up to 20,000 are sampled with seed 7 and converted to HTTPS homepages. |
+| `top-1m.csv` | Headerless rank/domain rows, at least 100,000 rows; tests the first 10,000 homepages and synthetic login paths plus a 20,000-domain sample from row positions 10,001-100,000. |
+
+From the repository root, using a directory containing the selected nonempty feeds:
+
+```powershell
+.\gradlew.bat :protection-core:test --tests org.suraksha.core.FeedEvaluationTest "-Pfeeds=C:\path\to\feeds" --rerun-tasks
+```
+
+Without a valid directory the test skips; missing individual files are omitted. The report at `protection-core/build/reports/feed-evaluation.txt` contains sample counts, dangerous and any-warning rates, and up to 40 potential false alarms per Tranco case. It is a descriptive URL-only evaluation, with no pass/fail accuracy threshold, live site verification or online-reputation measurement.
+
 ## JVM tests
 
 From the repository root with JDK 17:
