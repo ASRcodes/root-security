@@ -24,6 +24,20 @@ The host depends on `:protection`, Firebase Authentication, Firestore, FCM and G
 
 [FirstLaunchPermissions](src/main/java/com/asrcodes/dontmissmom/FirstLaunchPermissions.kt) accepts approximate location. Declining optional permissions still allows sign-in and basic SOS after the disclosure step; a location attachment needs the corresponding consent and permission. Phone linking validates the entered format and waits for the repository update before continuing.
 
+## SOS selection and retry status
+
+The main screen can send to one trusted contact or the eligible circle after confirmation. Blocked contacts and recipients with a send already in progress are excluded. The offline fallback opens the SMS composer for one eligible contact and leaves sending to the user.
+
+[MainViewModel](src/main/java/com/asrcodes/dontmissmom/MainViewModel.kt) deduplicates recipient IDs, captures the selected location and voice attachment, and retains an alert ID per pending recipient. A retry reuses that ID and attachment while rechecking contact eligibility. Pending state lives in the ViewModel; it is not a durable delivery outbox.
+
+| Submission state | Interpretation |
+|---|---|
+| Accepted | The HTTP response reports success; this does not prove receipt on the other phone. |
+| Unconfirmed | A timeout or uncertain response leaves acceptance unknown. |
+| Rejected | A definitive failure was returned; retry availability depends on that failure. |
+
+[AlertHttpCall](src/main/java/com/asrcodes/dontmissmom/AlertHttpCall.kt) performs one POST with a two-minute overall deadline and no automatic replay. The matching backend must honor the alert ID for idempotency when a user retries an unconfirmed request.
+
 ## Checks
 
 From the repository root:
